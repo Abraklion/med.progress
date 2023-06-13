@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// Настройка с библиотекой
+
+// Изменить параметры по умолчанию
+@use 'library/sumbiot/general/variables' with (
+  $orientation: 'desktop-first',
+
+  $container: (
+    sm: (breakpoint: 600px, max-width: none),
+    md: (breakpoint: 768px, max-width: 600px),
+    lg: (breakpoint: 992px, max-width: 720px),
+    xl: (breakpoint: 1200px, max-width: 960px)
+  ),
+
+  $font-size-basic: 14px,
+  $font-family-basic: "Montserrat",
+
+  $line-height-basic: 1.22
+);
+
+// Шрифты
+@use "fonts";
+
+
+// Библиотека
+@use "library/sumbiot";
+
+// Блоки
+
+
+
+

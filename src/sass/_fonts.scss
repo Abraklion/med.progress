@@ -1,0 +1,15 @@
+@use "mixins" as m;
+
+//-----===== Подключение шрифтов ====-----//
+
+// Montserrat-400 - latin_cyrillic
+@include m.fontInclude("Montserrat","montserrat-400",normal,400,"Montserrat-Regular");
+
+// Montserrat-500 - latin_cyrillic
+@include m.fontInclude("Montserrat","montserrat-500",normal,500,"Montserrat-Medium");
+
+// Montserrat-600 - latin_cyrillic
+@include m.fontInclude("Montserrat","montserrat-600",normal,600,"Montserrat-SemiBold");
+
+// Montserrat-700 - latin_cyrillic
+@include m.fontInclude("Montserrat","montserrat-700",normal,700,"Montserrat-Bold");
