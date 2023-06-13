@@ -1,0 +1,5 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="32.5" y="40.5" width="1" height="15" transform="rotate(-90 32.5 40.5)" fill="#DEDEDE"/>
+<rect x="39.5" y="32.5" width="1" height="15" fill="#DEDEDE"/>
+<rect x="0.5" y="0.5" width="79" height="79" rx="39.5" stroke="#DEDEDE" stroke-dasharray="10 10"/>
+</svg>
