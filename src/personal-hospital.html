@@ -1,0 +1,59 @@
+---
+layout: default
+
+title: Поликлиника | Личный кабинет
+description: Описание поликлиники
+
+link: style.min.css
+script: ['runtime.js', 'main.js', 'personalAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner">
+
+        <img class="personal__img" src="assets/img/icon-plug3.svg" width="1180" height="450" alt="">
+
+        <h1 class="personal__title title">Поликлиника №52</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-3">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-9">
+
+            <div class="personal__content content content--hospital-full">
+
+              {{> personal-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer}}
+

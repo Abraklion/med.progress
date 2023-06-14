@@ -17,6 +17,16 @@ module.exports = function () {
           index: {
             import: './src/js/index.js'
           },
+
+          // регистрация страница
+          reg: {
+            import: './src/js/reg.js'
+          },
+
+          // личный кабинет страницы
+          personalAccount: {
+            import: './src/js/personalAccount.js'
+          },
         },
         output: {
           filename: '[name].js'

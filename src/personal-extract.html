@@ -1,0 +1,57 @@
+---
+layout: default
+
+title: Выписка | Личный кабинет
+description: Описание выписка
+
+link: style.min.css
+script: ['runtime.js', 'main.js', 'personalAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner">
+
+        <h1 class="personal__title title">Личный кабинет</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-3">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-9">
+
+            <div class="personal__content content content--extract">
+
+              {{> personal-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer}}
+

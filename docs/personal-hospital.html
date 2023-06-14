@@ -6,18 +6,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Регистрация</title>
+  <title>Поликлиника | Личный кабинет</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описания регистрации">
+  <meta name="description" content="Описание поликлиники">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
   <script defer src="js/runtime.js"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/reg.js"></script>
+  <script defer src="js/personalAccount.js"></script>
 </head>
 
 <body>
@@ -137,62 +137,75 @@
 
   <main>
 
-    <div class="registration">
+    <div class="personal">
 
       <div class="sContainer">
 
-        <div class="registration__inner">
+        <div class="personal__inner">
 
-          <h1 class="registration__title title">Регистрация</h1>
+          <img class="personal__img" src="assets/img/icon-plug3.svg" width="1180" height="450" alt="">
 
-          <form class="registration__form sForm" action="" method="post">
+          <h1 class="personal__title title">Поликлиника №52</h1>
 
-            <div class="sForm__inner">
+          <div class="sRow">
 
-              <div class="sForm__item">
-                <div class="sForm__title">Заполните форму регистрации</div>
-              </div>
+            <div class="sCol-3">
 
-              <label class="sForm__item">
-                <span class="sForm__label">Действующие E-mail*</span>
-                <input class="sForm__input" type="text" name="email" placeholder="email@email.com">
-              </label>
+              <aside class="personal__sidebar sidebar">
 
-              <label class="sForm__item">
-                <span class="sForm__label">Придумайте пароль</span>
-                <input class="sForm__input" type="password" name="password" placeholder="Введите пароль">
-              </label>
+                <ul class="sidebar__menu menu">
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                      </svg>
+                      Личные данные
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                      </svg>
+                      Медицинские учреждения
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                      </svg>
+                      Выписка
+                    </a>
+                  </li>
+                </ul><!--/.menu-->
 
-              <div class="sForm__item">
-                <label for="repeat_password" class="sForm__label">Повторите пароль</label>
-                <input class="sForm__input" id="repeat_password" type="password" name="repeat_password" placeholder="Повторите пароль">
-                <p class="sForm__text">
-                  Уже есть аккаунт? Перейди на страницу
-                  <a class="sForm__link" href="">Главная</a>
-                </p>
-              </div>
+              </aside><!--/.sidebar-->
 
-              <div class="sForm__item">
-                <p class="sForm__text sForm__text--big">
-                  Нажимая кнопку «Регистрация», вы подтверждаете, что согласны на
-                  <a class="sForm__link" href="">обработку персональных данных</a>.
-                </p>
-              </div>
+            </div>
 
-              <div class="sForm__item">
-                <button class="info__button sBtn sBtn-primary" type="submit">Регистрация</button>
+            <div class="sCol-9">
 
-                <p class="sForm__text">*При завершении регистрации на указанный электронный адрес будет отправлено письмо для активации</p>
-              </div>
+              <div class="personal__content content content--hospital-full">
 
-            </div><!--/.sForm__inner-->
+                <!--Поликлиника-->
+                <h2 class="content__title title">Немного о нас</h2>
+                <div class="content__text">
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32</p>
+                  <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                </div>
 
-          </form><!--/.sForm-->
+              </div><!--/.content-->
 
-        </div><!--/.registration__inner-->
+            </div>
+
+          </div>
+
+        </div><!--/.personal__inner"-->
 
       </div><!--/.sContainer-->
-    </div><!--/.registration-->
+    </div><!--/.personal-->
 
   </main>
 
@@ -210,16 +223,13 @@
             <a href="" class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Платежи через сайт</a>
+            <a href="" class="menu__link">Сервисы</a>
           </li>
           <li class="menu__item">
             <a href="" class="menu__link">О нас</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Политика конфеденциальности</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">Публичная оферта</a>
+            <a href="" class="menu__link">Другие страницы</a>
           </li>
         </ul><!--/.menu-->
 

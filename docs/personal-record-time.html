@@ -6,18 +6,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Регистрация</title>
+  <title>Запись | Личный кабинет</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описания регистрации">
+  <meta name="description" content="Описание запись">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
   <script defer src="js/runtime.js"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/reg.js"></script>
+  <script defer src="js/personalAccount.js"></script>
 </head>
 
 <body>
@@ -137,62 +137,96 @@
 
   <main>
 
-    <div class="registration">
+    <div class="personal">
 
       <div class="sContainer">
 
-        <div class="registration__inner">
+        <div class="personal__inner">
 
-          <h1 class="registration__title title">Регистрация</h1>
+          <h1 class="personal__title title">Личный кабинет</h1>
 
-          <form class="registration__form sForm" action="" method="post">
+          <div class="sRow">
 
-            <div class="sForm__inner">
+            <div class="sCol-3">
 
-              <div class="sForm__item">
-                <div class="sForm__title">Заполните форму регистрации</div>
-              </div>
+              <aside class="personal__sidebar sidebar">
 
-              <label class="sForm__item">
-                <span class="sForm__label">Действующие E-mail*</span>
-                <input class="sForm__input" type="text" name="email" placeholder="email@email.com">
-              </label>
+                <ul class="sidebar__menu menu">
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                      </svg>
+                      Личные данные
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                      </svg>
+                      Медицинские учреждения
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                      </svg>
+                      Выписка
+                    </a>
+                  </li>
+                </ul><!--/.menu-->
 
-              <label class="sForm__item">
-                <span class="sForm__label">Придумайте пароль</span>
-                <input class="sForm__input" type="password" name="password" placeholder="Введите пароль">
-              </label>
+              </aside><!--/.sidebar-->
 
-              <div class="sForm__item">
-                <label for="repeat_password" class="sForm__label">Повторите пароль</label>
-                <input class="sForm__input" id="repeat_password" type="password" name="repeat_password" placeholder="Повторите пароль">
-                <p class="sForm__text">
-                  Уже есть аккаунт? Перейди на страницу
-                  <a class="sForm__link" href="">Главная</a>
-                </p>
-              </div>
+            </div>
 
-              <div class="sForm__item">
-                <p class="sForm__text sForm__text--big">
-                  Нажимая кнопку «Регистрация», вы подтверждаете, что согласны на
-                  <a class="sForm__link" href="">обработку персональных данных</a>.
-                </p>
-              </div>
+            <div class="sCol-9">
 
-              <div class="sForm__item">
-                <button class="info__button sBtn sBtn-primary" type="submit">Регистрация</button>
+              <div class="personal__content content content--record">
 
-                <p class="sForm__text">*При завершении регистрации на указанный электронный адрес будет отправлено письмо для активации</p>
-              </div>
+                <!--Выбертие время-->
+                <h2 class="content__title title">Запись к врачу</h2>
 
-            </div><!--/.sForm__inner-->
+                <ul class="content__breadcrumbs breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Рентген</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    Выбертие врача
+                  </li>
+                  <li class="breadcrumbs__item">
+                    Выбертие врача
+                  </li>
+                </ul>
 
-          </form><!--/.sForm-->
+                <ul class="table">
+                  <li class="table__row">
+                    <div class="table__col">
+                      <a class="appointment__link" href="">Иванов Иван Иванович</a>
+                    </div>
+                  </li>
+                  <li class="table__row">
+                    <div class="table__col">
+                      <a class="appointment__link" href="">Андреев Андрей Андреевич</a>
+                    </div>
+                  </li>
+                </ul>
 
-        </div><!--/.registration__inner-->
+              </div><!--/.content-->
+
+            </div>
+
+          </div>
+
+        </div><!--/.personal__inner"-->
 
       </div><!--/.sContainer-->
-    </div><!--/.registration-->
+    </div><!--/.personal-->
 
   </main>
 
@@ -210,16 +244,13 @@
             <a href="" class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Платежи через сайт</a>
+            <a href="" class="menu__link">Сервисы</a>
           </li>
           <li class="menu__item">
             <a href="" class="menu__link">О нас</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Политика конфеденциальности</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">Публичная оферта</a>
+            <a href="" class="menu__link">Другие страницы</a>
           </li>
         </ul><!--/.menu-->
 

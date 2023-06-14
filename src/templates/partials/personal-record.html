@@ -1,0 +1,132 @@
+
+{{#ifpage 'personal-record-department'}}
+<!--Выбертие отделение-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    Выбертие отделение
+  </li>
+</ul>
+
+<div class="table">
+  <a class="table__row" href="">
+    <span class="table__col">Терапевтия</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">Травмпункт</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">Хирургия</span>
+  </a>
+</div>
+{{/ifpage}}
+
+
+
+{{#ifpage 'personal-record-service'}}
+<!--Выбертие услугу-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<ul class="content__title breadcrumbs">
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+  </li>
+  <li class="breadcrumbs__item">
+    Выбертие услугу
+  </li>
+</ul>
+
+<div class="table">
+  <a class="table__row" href="">
+    <span class="table__col">Первичный приём</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">Рентген</span>
+  </a>
+</div>
+{{/ifpage}}
+
+
+
+{{#ifpage 'personal-record-doctor'}}
+<!--Выбертие врача-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Рентген</a>
+  </li>
+  <li class="breadcrumbs__item">
+    Выбертие врача
+  </li>
+</ul>
+
+<div class="table">
+  <a class="table__row" href="">
+    <span class="table__col">Иванов Иван Иванович</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">Андреев Андрей Андреевич</span>
+  </a>
+</div>
+{{/ifpage}}
+
+
+
+{{#ifpage 'personal-record-date'}}
+<!--Выбертие дату-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Рентген</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие врача</a>
+  </li>
+  <li class="breadcrumbs__item">
+    Выбертие дату
+  </li>
+</ul>
+
+<div class="table">
+
+  <div class="table__row table__row--header">
+    <div class="table__col">
+      <b>Дата</b>
+    </div>
+    <div class="table__col">
+      <b>День недели</b>
+    </div>
+  </div>
+
+  {{#repeat 2}}
+  <a class="table__row" href="">
+    <span class="table__col">12.04.2022</span>
+    <span class="table__col">Понедельник</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">13.04.2022</span>
+    <span class="table__col">Вторник</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">19.04.2022</span>
+    <span class="table__col">Четверг</span>
+  </a>
+  {{/repeat}}
+</div>
+
+<a href="" class="content__button sBtn">Еще</a>
+{{/ifpage}}
+
+
+
+
+
