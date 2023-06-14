@@ -49,7 +49,7 @@
 
                   <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu">
+                  <ul class="menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">Главная</a>
                     </li>
@@ -61,7 +61,7 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="navigation__menu menu">
+                  <ul class="menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">
                         <svg width="30" height="30" aria-hidden="true">
@@ -151,32 +151,32 @@
 
               <aside class="personal__sidebar sidebar">
 
-                <ul class="sidebar__menu menu">
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                      </svg>
-                      Личные данные
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                      </svg>
-                      Медицинские учреждения
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
-                      </svg>
-                      Выписка
-                    </a>
-                  </li>
-                </ul><!--/.menu-->
+                <!--<ul class="sidebar__menu menu">-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-user"/>-->
+                <!--      </svg>-->
+                <!--      Личные данные-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>-->
+                <!--      </svg>-->
+                <!--      Медицинские учреждения-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-list"/>-->
+                <!--      </svg>-->
+                <!--      Выписка-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--</ul>&lt;!&ndash;/.menu&ndash;&gt;-->
 
               </aside><!--/.sidebar-->
 
@@ -197,25 +197,53 @@
                     <a class="breadcrumbs__link" href="">Рентген</a>
                   </li>
                   <li class="breadcrumbs__item">
-                    Выбертие врача
+                    <a class="breadcrumbs__link" href="">Выбертие врача</a>
                   </li>
                   <li class="breadcrumbs__item">
-                    Выбертие врача
+                    <a class="breadcrumbs__link" href="">15.04.2022</a>
                   </li>
-                </ul>
+                  <li class="breadcrumbs__item">
+                    Выбертие время
+                  </li>
+                </ul><!--/.breadcrumbs-->
 
-                <ul class="table">
-                  <li class="table__row">
+                <div class="table">
+
+                  <div class="table__row table__row--header">
                     <div class="table__col">
-                      <a class="appointment__link" href="">Иванов Иван Иванович</a>
+                      <b>Время</b>
                     </div>
-                  </li>
-                  <li class="table__row">
                     <div class="table__col">
-                      <a class="appointment__link" href="">Андреев Андрей Андреевич</a>
+                      <b>Статус</b>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+
+                  <a class="table__row" href="">
+                    <span class="table__col">12:20</span>
+                    <span class="table__col">Свободно</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">15:15</span>
+                    <span class="table__col">Занято</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">17:00</span>
+                    <span class="table__col">Свободно</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">12:20</span>
+                    <span class="table__col">Свободно</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">15:15</span>
+                    <span class="table__col">Занято</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">17:00</span>
+                    <span class="table__col">Свободно</span>
+                  </a>
+
+                </div><!--/.table-->
 
               </div><!--/.content-->
 
@@ -258,6 +286,7 @@
 
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
+  +
 
 </body>
 

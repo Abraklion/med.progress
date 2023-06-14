@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Запись | Личный кабинет</title>
+  <title>Запись | Личный кабинет Доктора</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,7 +49,7 @@
 
                   <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu">
+                  <ul class="menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">Главная</a>
                     </li>
@@ -61,7 +61,7 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="navigation__menu menu">
+                  <ul class="menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">
                         <svg width="30" height="30" aria-hidden="true">
@@ -75,7 +75,7 @@
                         <svg width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                         </svg>
-                        Медицинские учреждения
+                        Записи
                       </a>
                     </li>
                     <li class="menu__item">
@@ -137,46 +137,46 @@
 
   <main>
 
-    <div class="personal-account">
+    <div class="personal">
 
       <div class="sContainer">
 
-        <div class="personal-account__inner">
+        <div class="personal__inner">
 
-          <h1 class="personal-account__title title">Личный кабинет</h1>
+          <h1 class="personal__title title">Личный кабинет врача</h1>
 
           <div class="sRow">
 
             <div class="sCol-3">
 
-              <aside class="sidebar">
+              <aside class="personal__sidebar sidebar">
 
-                <ul class="sidebar__menu menu">
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                      </svg>
-                      Личные данные
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                      </svg>
-                      Медицинские учреждения
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
-                      </svg>
-                      Выписка
-                    </a>
-                  </li>
-                </ul><!--/.menu-->
+                <!--<ul class="sidebar__menu menu">-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-user"/>-->
+                <!--      </svg>-->
+                <!--      Личные данные-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>-->
+                <!--      </svg>-->
+                <!--      Медицинские учреждения-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--  <li class="menu__item">-->
+                <!--    <a href="" class="menu__link">-->
+                <!--      <svg width="30" height="30" aria-hidden="true">-->
+                <!--        <use xlink:href="assets/img/sprite/sprite.svg#icon-list"/>-->
+                <!--      </svg>-->
+                <!--      Выписка-->
+                <!--    </a>-->
+                <!--  </li>-->
+                <!--</ul>&lt;!&ndash;/.menu&ndash;&gt;-->
 
               </aside><!--/.sidebar-->
 
@@ -184,30 +184,56 @@
 
             <div class="sCol-9">
 
-              <div class="content">
+              <div class="personal__content content content--record">
 
-                <section class="appointment">
-                  <h2 class="appointment__title title">Запись к врачу</h2>
+                <!--Подтвердить запись к врачу-->
+                <h2 class="content__title title">Запись к врачу</h2>
 
-                  <ul class="appointment__breadcrumbs breadcrumbs">
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="">Выбертие отделение</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="">Выбертие услугу</a>
-                    </li>
-                  </ul>
+                <form action="" class="sForm" method="post">
 
-                  <ul class="appointment__list">
-                    <li class="appointment__item">
-                      <a class="appointment__link" href="">Первичный приём</a>
-                    </li>
-                    <li class="appointment__item">
-                      <a class="appointment__link" href="">Рентген</a>
-                    </li>
-                  </ul>
+                  <div class="sForm__inner">
 
-                </section><!--/.appointment-->
+                    <div class="sForm__item">
+                      <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
+                      <input type="hidden" name="institution" value="Иванов Иван Иванович">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Учреждение: Поликлинника №52</span>
+                      <input type="hidden" name="institution" value="Поликлинника №52">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Отделение: Травмпункт</span>
+                      <input type="hidden" name="department" value="Травмпункт">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Услуга: Рентген</span>
+                      <input type="hidden" name="service" value="Рентген">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Врач: Андреев Андрей Андреевич</span>
+                      <input type="hidden" name="doctor" value="Андреев Андрей Андреевич">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Дата и время: 15.04.2022 в 16:00</span>
+                      <input type="hidden" name="date" value="2022-04-15">
+                      <input type="hidden" name="time" value="16:00">
+                    </div>
+
+                    <div class="sForm__item sForm__item--column-6">
+                      <button class="sBtn" type="submit">Подтвердить</button>
+                    </div>
+
+                    <div class="sForm__item sForm__item--column-6">
+                      <a class="sBtn" href="">Отмена</a>
+                    </div>
+
+                  </div><!--/.sForm__inner-->
+                </form><!--/.sForm-->
 
               </div><!--/.content-->
 
@@ -215,10 +241,10 @@
 
           </div>
 
-        </div><!--/.personal-account__inner"-->
+        </div><!--/.personal__inner"-->
 
       </div><!--/.sContainer-->
-    </div><!--/.personal-account-->
+    </div><!--/.personal-->
 
   </main>
 

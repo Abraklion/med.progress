@@ -1,1 +1,1 @@
-{"version":3,"file":"main.js","mappings":";;;;;;;;AACAA,OAAO,CAACC,GAAG,CAAC,IAAI,CAAC","sources":["webpack://gulp-html-scss/./src/js/main.js"],"sourcesContent":["\r\nconsole.log('ok')\r\n\r\n"],"names":["console","log"],"sourceRoot":""}
+{"version":3,"file":"main.js","mappings":";;;;;;;;AACAA,OAAO,CAACC,GAAG,CAAC,IAAI,CAAC","sources":["webpack://gulp-html-scss/./src/js/main.js"],"sourcesContent":["\nconsole.log('ok')\n\n"],"names":["console","log"],"sourceRoot":""}

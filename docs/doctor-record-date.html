@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Запись | Личный кабинет</title>
+  <title>Запись | Личный кабинет Доктора</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -137,19 +137,19 @@
 
   <main>
 
-    <div class="personal-account">
+    <div class="personal">
 
       <div class="sContainer">
 
-        <div class="personal-account__inner">
+        <div class="personal__inner">
 
-          <h1 class="personal-account__title title">Личный кабинет</h1>
+          <h1 class="personal__title title">Личный кабинет врача</h1>
 
           <div class="sRow">
 
             <div class="sCol-3">
 
-              <aside class="sidebar">
+              <aside class="personal__sidebar sidebar">
 
                 <ul class="sidebar__menu menu">
                   <li class="menu__item">
@@ -184,33 +184,64 @@
 
             <div class="sCol-9">
 
-              <div class="content">
+              <div class="personal__content content content--record">
 
-                <section class="appointment">
-                  <h2 class="appointment__title title">Запись к врачу</h2>
+                <!--Выбертие дату-->
+                <h2 class="content__title title">Запись к врачу</h2>
 
-                  <ul class="appointment__breadcrumbs breadcrumbs">
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="">Выбертие отделение</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="">Рентген</a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                      <a class="breadcrumbs__link" href="">Выбертие врача</a>
-                    </li>
-                  </ul>
+                <ul class="content__breadcrumbs breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Рентген</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Выбертие врача</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    Выбертие дату
+                  </li>
+                </ul><!--/.breadcrumbs-->
 
-                  <ul class="appointment__list">
-                    <li class="appointment__item">
-                      <a class="appointment__link" href="">Иванов Иван Иванович</a>
-                    </li>
-                    <li class="appointment__item">
-                      <a class="appointment__link" href="">Андреев Андрей Андреевич</a>
-                    </li>
-                  </ul>
+                <div class="table">
 
-                </section><!--/.appointment-->
+                  <div class="table__row table__row--header">
+                    <div class="table__col">
+                      <b>Дата</b>
+                    </div>
+                    <div class="table__col">
+                      <b>День недели</b>
+                    </div>
+                  </div>
+
+                  <a class="table__row" href="">
+                    <span class="table__col">12.04.2022</span>
+                    <span class="table__col">Понедельник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">13.04.2022</span>
+                    <span class="table__col">Вторник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">19.04.2022</span>
+                    <span class="table__col">Четверг</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">12.04.2022</span>
+                    <span class="table__col">Понедельник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">13.04.2022</span>
+                    <span class="table__col">Вторник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">19.04.2022</span>
+                    <span class="table__col">Четверг</span>
+                  </a>
+                </div><!--/.table-->
+
+                <a href="" class="content__button sBtn">Еще</a>
 
               </div><!--/.content-->
 
@@ -218,10 +249,10 @@
 
           </div>
 
-        </div><!--/.personal-account__inner"-->
+        </div><!--/.personal__inner"-->
 
       </div><!--/.sContainer-->
-    </div><!--/.personal-account-->
+    </div><!--/.personal-->
 
   </main>
 

@@ -1,6 +1,6 @@
 
 
-{{#ifpage 'personal-data'}}
+{{#ifpage 'personal-data' 'doctor-data'}}
 <!--Личные данные-->
 <form action="" class="sForm" method="post">
 
@@ -29,6 +29,17 @@
         <input class="sForm__input" id="phone" type="text" name="phone" placeholder="+7 (999) 123 45 67">
       </div>
 
+      {{#ifpage 'doctor-data'}}
+      <div class="sForm__item sForm__item--column-6">
+        <label class="visually-hidden" for="city">Город</label>
+        <input class="sForm__input" id="city" type="text" name="city" placeholder="Город">
+      </div>
+
+      <div class="sForm__item sForm__item--column-6">
+        <label class="visually-hidden" for="organization">Телефон</label>
+        <input class="sForm__input" id="organization" type="text" name="organization" placeholder="Организация">
+      </div>
+      {{/ifpage}}
     </div>
 
   </section><!--/.content__box-->
@@ -139,7 +150,7 @@
 
 
 
-{{#ifpage 'personal-extract'}}
+{{#ifpage 'personal-extract' 'doctor-extract'}}
 <!--Выписка-->
 <h2 class="content__title title">Выписка</h2>
 

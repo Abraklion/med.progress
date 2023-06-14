@@ -1,8 +1,8 @@
 ---
 layout: default
 
-title: Личные данные | Личный кабинет
-description: Описания личные данные
+title: Выписка | Личный кабинет Доктора
+description: Описание выписка
 
 link: style.min.css
 script: ['runtime.js', 'main.js', 'personalAccount.js']
@@ -10,7 +10,7 @@ script: ['runtime.js', 'main.js', 'personalAccount.js']
 lottiePlayer: false
 ---
 
-{{> header}}
+{{> header-doctor}}
 
 <main>
 
@@ -20,7 +20,7 @@ lottiePlayer: false
 
       <div class="personal__inner">
 
-        <h1 class="personal__title title">Личный кабинет</h1>
+        <h1 class="personal__title title">Личный кабинет врача</h1>
 
         <div class="sRow">
 
@@ -36,7 +36,7 @@ lottiePlayer: false
 
           <div class="sCol-9">
 
-            <div class="personal__content content content--data">
+            <div class="personal__content content content--extract">
 
               {{> personal-account}}
 
@@ -54,3 +54,4 @@ lottiePlayer: false
 </main>
 
 {{> footer}}
+

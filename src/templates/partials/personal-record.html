@@ -7,7 +7,7 @@
   <li class="breadcrumbs__item">
     Выбертие отделение
   </li>
-</ul>
+</ul><!--/.breadcrumbs-->
 
 <div class="table">
   <a class="table__row" href="">
@@ -19,7 +19,7 @@
   <a class="table__row" href="">
     <span class="table__col">Хирургия</span>
   </a>
-</div>
+</div><!--/.table-->
 {{/ifpage}}
 
 
@@ -35,7 +35,7 @@
   <li class="breadcrumbs__item">
     Выбертие услугу
   </li>
-</ul>
+</ul><!--/.breadcrumbs-->
 
 <div class="table">
   <a class="table__row" href="">
@@ -44,7 +44,7 @@
   <a class="table__row" href="">
     <span class="table__col">Рентген</span>
   </a>
-</div>
+</div><!--/.table-->
 {{/ifpage}}
 
 
@@ -63,7 +63,7 @@
   <li class="breadcrumbs__item">
     Выбертие врача
   </li>
-</ul>
+</ul><!--/.breadcrumbs-->
 
 <div class="table">
   <a class="table__row" href="">
@@ -72,7 +72,7 @@
   <a class="table__row" href="">
     <span class="table__col">Андреев Андрей Андреевич</span>
   </a>
-</div>
+</div><!--/.table-->
 {{/ifpage}}
 
 
@@ -94,7 +94,7 @@
   <li class="breadcrumbs__item">
     Выбертие дату
   </li>
-</ul>
+</ul><!--/.breadcrumbs-->
 
 <div class="table">
 
@@ -121,9 +121,135 @@
     <span class="table__col">Четверг</span>
   </a>
   {{/repeat}}
-</div>
+</div><!--/.table-->
 
 <a href="" class="content__button sBtn">Еще</a>
+{{/ifpage}}
+
+
+
+{{#ifpage 'personal-record-time' 'doctor-record-time'}}
+<!--Выбертие время-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Рентген</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">Выбертие врача</a>
+  </li>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">15.04.2022</a>
+  </li>
+  <li class="breadcrumbs__item">
+    Выбертие время
+  </li>
+</ul><!--/.breadcrumbs-->
+
+<div class="table">
+
+  <div class="table__row table__row--header">
+    <div class="table__col">
+      <b>Время</b>
+    </div>
+    <div class="table__col">
+      <b>Статус</b>
+    </div>
+  </div>
+
+  {{#ifpage 'personal-record-time'}}
+  {{#repeat 2}}
+  <a class="table__row" href="">
+    <span class="table__col">12:20</span>
+    <span class="table__col">Свободно</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">15:15</span>
+    <span class="table__col">Занято</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">17:00</span>
+    <span class="table__col">Свободно</span>
+  </a>
+  {{/repeat}}
+  {{/ifpage}}
+
+  {{#ifpage 'doctor-record-time'}}
+  {{#repeat 2}}
+  <a class="table__row" href="">
+    <span class="table__col">12:20</span>
+    <span class="table__col">Свободно</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">15:15</span>
+    <span class="table__col">Запись</span>
+  </a>
+  <a class="table__row" href="">
+    <span class="table__col">17:00</span>
+    <span class="table__col">Не подтверждено</span>
+  </a>
+  {{/repeat}}
+  {{/ifpage}}
+</div><!--/.table-->
+{{/ifpage}}
+
+
+
+{{#ifpage 'personal-record-confirm' 'doctor-record-confirm'}}
+<!--Подтвердить запись к врачу-->
+<h2 class="content__title title">Запись к врачу</h2>
+
+<form action="" class="sForm" method="post">
+
+  <div class="sForm__inner">
+
+    {{#ifpage 'doctor-record-confirm'}}
+    <div class="sForm__item">
+      <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
+      <input type="hidden" name="institution" value="Иванов Иван Иванович">
+    </div>
+    {{/ifpage}}
+
+    <div class="sForm__item">
+      <span class="sForm__label">Учреждение: Поликлинника №52</span>
+      <input type="hidden" name="institution" value="Поликлинника №52">
+    </div>
+
+    <div class="sForm__item">
+      <span class="sForm__label">Отделение: Травмпункт</span>
+      <input type="hidden" name="department" value="Травмпункт">
+    </div>
+
+    <div class="sForm__item">
+      <span class="sForm__label">Услуга: Рентген</span>
+      <input type="hidden" name="service" value="Рентген">
+    </div>
+
+    <div class="sForm__item">
+      <span class="sForm__label">Врач: Андреев Андрей Андреевич</span>
+      <input type="hidden" name="doctor" value="Андреев Андрей Андреевич">
+    </div>
+
+    <div class="sForm__item">
+      <span class="sForm__label">Дата и время: 15.04.2022 в 16:00</span>
+      <input type="hidden" name="date" value="2022-04-15">
+      <input type="hidden" name="time" value="16:00">
+    </div>
+
+    <div class="sForm__item sForm__item--column-6">
+      <button class="sBtn" type="submit">Подтвердить</button>
+    </div>
+
+    <div class="sForm__item sForm__item--column-6">
+      <a class="sBtn" href="">Отмена</a>
+    </div>
+
+  </div><!--/.sForm__inner-->
+</form><!--/.sForm-->
 {{/ifpage}}
 
 
