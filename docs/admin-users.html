@@ -1,0 +1,554 @@
+<!doctype html>
+
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Список пользователей | Кабинет администратора</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Abraklion">
+  <meta name="description" content="Описания список пользователей">
+
+  <link rel="stylesheet" href="assets/css/style.min.css">
+
+  <script defer src="js/runtime.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/adminAccount.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="sContainer">
+
+      <div class="header__inner">
+
+        <a href="" class="header__logo logo">
+          <img class="logo__img" src="assets/img/logo.svg" width="180" height="21" alt="Логотип MED.PROGRESS">
+        </a><!--/.logo-->
+
+        <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
+
+        <nav class="header__navigation navigation">
+
+          <button class="navigation__burger js-burger" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button><!--/.burger-->
+
+          <div class="navigation__inner">
+
+            <div class="sRow">
+
+              <div class="sCol-6">
+
+                <div class="navigation__menu-inner">
+
+                  <h2 class="navigation__title title">Меню</h2>
+
+                  <ul class="navigation__menu menu">
+                    <li class="menu__item">
+                      <a href="" class="menu__link">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="" class="menu__link">Сервисы</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="" class="menu__link">О нас</a>
+                    </li>
+                  </ul><!--/.menu-->
+
+                  <ul class="navigation__menu menu">
+                    <li class="menu__item">
+                      <a href="" class="menu__link">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                        </svg>
+                        Пользователи
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="" class="menu__link">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                        </svg>
+                        Новости
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="" class="menu__link">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                        </svg>
+                        Редактор блоков
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="" class="menu__link">
+                        <svg width="30" height="30" aria-hidden="true">
+                          <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                        </svg>
+                        Выйти
+                      </a>
+                    </li>
+                  </ul><!--/.menu-->
+
+                </div>
+
+              </div>
+
+              <div class="sCol-6">
+
+                <address class="navigation__contacts-inner">
+
+                  <h2 class="navigation__title title">Контакты</h2>
+
+                  <ul class="navigation__contacts contacts">
+                    <li class="contacts__item contacts__item--mail">
+                      <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                    </li>
+                    <li class="contacts__item contacts__item--phone">
+                      <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                    </li>
+                    <li class="contacts__item contacts__item--marker">
+                      <p class="contacts__address">
+                        ООО «CIRCLE SCHOOL» <br>
+                        ИНН 0273908137 <br>
+                        КПП 027701001 <br>
+                        ОГРН 1160280082896
+                      </p>
+                      <p class="contacts__address">
+                        450065, Республика Башкортостан, <br>
+                        г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                        по будням с 9:00 до 18:00
+                      </p>
+                    </li>
+                  </ul><!--/.contacts-->
+
+                </address>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </nav><!--/.navigation-->
+
+      </div><!--/.header__inner-->
+
+    </div><!--/.sContainer-->
+  </header><!--/.header-->
+
+  <main>
+
+    <div class="personal">
+
+      <div class="sContainer">
+
+        <div class="personal__inner">
+
+          <h1 class="personal__title title">Кабинет администратора</h1>
+
+          <div class="sRow">
+
+            <div class="sCol-3">
+
+              <aside class="personal__sidebar sidebar">
+
+                <ul class="sidebar__menu menu">
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                      </svg>
+                      Пользователи
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                      </svg>
+                      Новости
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                      </svg>
+                      Редактор блоков
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                      </svg>
+                      Выйти
+                    </a>
+                  </li>
+                </ul><!--/.menu-->
+
+              </aside><!--/.sidebar-->
+
+            </div>
+
+            <div class="sCol-9">
+
+              <div class="personal__content content content--users">
+
+                <!--Список пользователей-->
+                <h2 class="content__title title">Список пользователей</h2>
+
+                <form action="" class="content__form-search sForm" method="post">
+
+                  <div class="sForm__inner">
+
+                    <div class="sForm__item sForm__item--column-5">
+                      <label class="visually-hidden" for="personal_account">Поиск по логину или № лицевого счёта</label>
+                      <input class="sForm__input" id="personal_account" type="text" name="personal_account" placeholder="Поиск по логину или № лицевого счёта">
+                    </div>
+
+                    <div class="sForm__item sForm__item--column-4">
+                      <div class="sForm__linear sD-grid">
+                        <label class="sForm__label" for="start_date">от</label>
+                        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+
+                        <label class="sForm__label" for="start_end">до</label>
+                        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
+                      </div>
+                    </div>
+
+                    <div class="sForm__item sForm__item--column-1">
+                      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+                    </div>
+
+                  </div><!--/.sForm__inner-->
+
+                </form><!--/.sForm-->
+
+                <div class="table">
+
+                  <div class="table__row table__row--header">
+                    <div class="table__col">
+                      <b>Логин</b>
+                    </div>
+                    <div class="table__col">
+                      <b>№лицевого счёта</b>
+                    </div>
+                    <div class="table__col">
+                      <b>Дата регистрации</b>
+                    </div>
+                    <div class="table__col">
+                      <b>Статус учётной записи</b>
+                    </div>
+                  </div><!--/.table__row--header-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">не активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">не активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">не активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">не активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="table__clip">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="История операций">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить пользователя">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                </div>
+
+                <a href="" class="sBtn">Еще</a>
+
+              </div><!--/.content-->
+
+            </div>
+
+          </div>
+
+        </div><!--/.personal__inner"-->
+
+      </div><!--/.sContainer-->
+    </div><!--/.personal-->
+
+  </main>
+
+  <footer class="footer">
+    <div class="sContainer">
+
+      <div class="footer__inner">
+
+        <a href="" class="footer__logo logo">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
+        </a><!--/.logo-->
+
+        <ul class="footer__menu menu">
+          <li class="menu__item">
+            <a href="" class="menu__link">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Платежи через сайт</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Политика конфеденциальности</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Публичная оферта</a>
+          </li>
+        </ul><!--/.menu-->
+
+      </div><!--/.footer__inner-->
+
+    </div><!--/.sContainer-->
+  </footer><!--/.footer-->
+
+  <section class="modal modal--confirm">
+
+    <div class="modal__inner">
+
+      <h2 class="modal__title">Вы желаете удалить пользователя?</h2>
+
+      <div class="modal__wrapper-btn">
+        <a class="modal__btn sBtn" href="">Удалить</a>
+        <a class="modal__btn sBtn" href="">Отмена</a>
+      </div>
+    </div><!--/.modal__inner"-->
+
+  </section><!--/.modal-->
+
+</body>
+
+</html>

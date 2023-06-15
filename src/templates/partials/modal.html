@@ -1,5 +1,6 @@
 
-<section class="modal">
+{{#ifpage 'personal-record-confirm'}}
+<section class="modal modal--success">
 
   <div class="sContainer">
 
@@ -18,8 +19,12 @@
   </div><!--/.sContainer-->
 
 </section><!--/.modal-->
+{{/ifpage}}
 
-<section class="modal">
+
+
+{{#ifpage 'personal-record-confirm'}}
+<section class="modal modal--error">
 
   <div class="sContainer">
 
@@ -37,3 +42,22 @@
   </div><!--/.sContainer-->
 
 </section><!--/.modal-->
+{{/ifpage}}
+
+
+
+{{#ifpage 'admin-users' 'registry-users'}}
+<section class="modal modal--confirm">
+
+    <div class="modal__inner">
+
+      <h2 class="modal__title">Вы желаете удалить пользователя?</h2>
+
+      <div class="modal__wrapper-btn">
+        <a class="modal__btn sBtn" href="">Удалить</a>
+        <a class="modal__btn sBtn" href="">Отмена</a>
+      </div>
+    </div><!--/.modal__inner"-->
+
+</section><!--/.modal-->
+{{/ifpage}}

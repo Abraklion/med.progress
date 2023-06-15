@@ -1,5 +1,4 @@
 
-
 {{#ifpage 'personal-data' 'doctor-data'}}
 <!--Личные данные-->
 <form action="" class="sForm" method="post">
@@ -154,19 +153,19 @@
 <!--Выписка-->
 <h2 class="content__title title">Выписка</h2>
 
-<ul class="table">
+<div class="table">
 
   {{#repeat 7}}
-  <li class="table__row">
+  <div class="table__row">
     <div class="table__col">
-      <span>Поликлиника 1</span>
+      <span class="table__clip">Поликлиника 1</span>
     </div>
     <div class="table__col">02.12.24 12:34</div>
     <div class="table__col">350 Р</div>
-  </li>
+  </div>
   {{/repeat}}
 
-</ul>
+</div>
 
 <a href="" class="sBtn">Еще</a>
 {{/ifpage}}

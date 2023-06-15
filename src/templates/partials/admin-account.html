@@ -1,0 +1,352 @@
+
+{{#ifpage 'admin-users' 'registry-users'}}
+<!--Список пользователей-->
+<h2 class="content__title title">Список пользователей</h2>
+
+<form action="" class="content__form-search sForm" method="post">
+
+  <div class="sForm__inner">
+
+    <div class="sForm__item sForm__item--column-5">
+      <label class="visually-hidden" for="personal_account">Поиск по логину или № лицевого счёта</label>
+      <input class="sForm__input" id="personal_account" type="text" name="personal_account" placeholder="Поиск по логину или № лицевого счёта">
+    </div>
+
+    <div class="sForm__item sForm__item--column-4">
+      <div class="sForm__linear sD-grid">
+        <label class="sForm__label" for="start_date">от</label>
+        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+
+        <label class="sForm__label" for="start_end">до</label>
+        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
+      </div>
+    </div>
+
+    <div class="sForm__item sForm__item--column-1">
+      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+    </div>
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+
+<div class="table">
+
+  <div class="table__row table__row--header">
+    <div class="table__col">
+      <b>Логин</b>
+    </div>
+    <div class="table__col">
+      <b>№лицевого счёта</b>
+    </div>
+    <div class="table__col">
+      <b>Дата регистрации</b>
+    </div>
+    <div class="table__col">
+      <b>Статус учётной записи</b>
+    </div>
+  </div><!--/.table__row--header-->
+
+
+  {{#repeat 4}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="table__clip">login_polzovatela</span>
+    </div>
+    <div class="table__col">
+      <span class="table__clip">4752015698</span>
+    </div>
+    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col">не активированна</div>
+    <div class="table__col">
+      <div class="table__wrapper-btn">
+        <a class="table__icon" href="" title="Редактировать пользователя">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="История операций">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="Удалить пользователя">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div><!--/.table__row-->
+
+  <div class="table__row">
+    <div class="table__col">
+      <span class="table__clip">login_polzovatela</span>
+    </div>
+    <div class="table__col">
+      <span class="table__clip">4752015698</span>
+    </div>
+    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col">активированна</div>
+    <div class="table__col">
+      <div class="table__wrapper-btn">
+        <a class="table__icon" href="" title="Редактировать пользователя">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="История операций">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="Удалить пользователя">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div><!--/.table__row-->
+  {{/repeat}}
+
+</div>
+
+<a href="" class="sBtn">Еще</a>
+{{/ifpage}}
+
+
+
+{{#ifpage 'admin-history' 'registry-history'}}
+<!--История операций-->
+<h2 class="content__title title">
+  История операций пользователя
+  <b>login_polzovatela</b>
+</h2>
+
+<form action="" class="content__form-search sForm" method="post">
+
+  <div class="sForm__inner">
+
+    <div class="sForm__item sForm__item--column-4">
+      <div class="sForm__linear sD-grid">
+        <label class="sForm__label" for="start_date">от</label>
+        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+
+        <label class="sForm__label" for="start_end">до</label>
+        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
+      </div>
+    </div>
+
+    <div class="sForm__item sForm__item--column-1">
+      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+    </div>
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+
+<div class="table">
+
+  {{#repeat 7}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="table__clip">Списание</span>
+    </div>
+    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col">350 Р</div>
+  </div>
+  {{/repeat}}
+
+</div>
+
+<a href="" class="sBtn">Еще</a>
+{{/ifpage}}
+
+
+
+{{#ifpage 'admin-edit-user' 'registry-edit-user'}}
+<!--Редактировать пользователя-->
+<h2 class="content__title title">
+  Редактирование пользователя
+  <b>login_polzovatela</b>
+</h2>
+
+<form class="sForm" action="" method="post">
+
+  <div class="sForm__inner">
+
+    <label class="sForm__item">
+      <span class="sForm__label">Лицевой счёт № 52658741</span>
+      <input class="sForm__input" type="text" name="email" value="52658741" placeholder="email@email.com">
+    </label>
+
+    <label class="sForm__item">
+      <span class="sForm__label">Фамилия: Иванов</span>
+      <input class="sForm__input" type="text" name="password" placeholder="Введите новую фамилию">
+    </label>
+
+    <label class="sForm__item">
+      <span class="sForm__label">Действующие E-mail: email_polzovatela@email.ru</span>
+      <input class="sForm__input" type="text" name="password" placeholder="Введите новый e-mail">
+    </label>
+
+    <label class="sForm__item">
+      <span class="sForm__label">Пароль: 123456789qwerty</span>
+      <input class="sForm__input" type="password" name="password" placeholder="Введите новый пароль">
+    </label>
+
+    <div class="sForm__item">
+      <button class="sBtn sBtn-primary" type="submit">Сохранить</button>
+    </div>
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+{{/ifpage}}
+
+
+
+{{#ifpage 'admin-news' 'registry-news'}}
+<!--Список новостей-->
+<h2 class="content__title title">Список новостей</h2>
+
+<form action="" class="content__form-search sForm" method="post">
+
+  <div class="sForm__inner">
+
+    <div class="sForm__item sForm__item--column-5">
+      <label class="visually-hidden" for="name_news">Поиск по названию новости</label>
+      <input class="sForm__input" id="name_news" type="text" name="name_news" placeholder="Поиск по названию">
+    </div>
+
+    <div class="sForm__item sForm__item--column-4">
+      <div class="sForm__linear sD-grid">
+        <label class="sForm__label" for="start_date">от</label>
+        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+
+        <label class="sForm__label" for="start_end">до</label>
+        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
+      </div>
+    </div>
+
+    <div class="sForm__item sForm__item--column-1">
+      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+    </div>
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+
+<div class="content__btn-wrapper">
+  <a class="sBtn sBtn-primary" href="">Добавить новость</a>
+</div>
+
+<div class="table">
+
+  <div class="table__row table__row--header">
+    <div class="table__col">
+      <b>Название</b>
+    </div>
+    <div class="table__col">
+      <b>Последнее редактировние</b>
+    </div>
+    <div class="table__col">
+      <b>Дата и время публикации</b>
+    </div>
+    <div class="table__col">
+      <b>Статус новости</b>
+    </div>
+  </div><!--/.table__row--header-->
+
+  {{#repeat 4}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+    </div>
+    <div class="table__col">
+      <span>02.12.24 12:34</span>
+    </div>
+    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col">не опубликована</div>
+    <div class="table__col">
+      <div class="table__wrapper-btn">
+        <a class="table__icon" href="" title="Редактировать новость">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="Удалить новость">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div><!--/.table__row-->
+
+  <div class="table__row">
+    <div class="table__col">
+      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+    </div>
+    <div class="table__col">
+      <span>02.12.24 12:34</span>
+    </div>
+    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col">опубликована</div>
+    <div class="table__col">
+      <div class="table__wrapper-btn">
+        <a class="table__icon" href="" title="Редактировать новость">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+          </svg>
+        </a>
+        <a class="table__icon" href="" title="Удалить новость">
+          <svg width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div><!--/.table__row-->
+  {{/repeat}}
+</div>
+
+<a href="" class="sBtn">Еще</a>
+{{/ifpage}}
+
+
+
+{{#ifpage 'admin-edit-news' 'registry-edit-news'}}
+<!--Редактирование новости-->
+<h2 class="content__title title">Редактирование новости</h2>
+
+<form action="" class="content__form-page sForm" method="post">
+
+  <div class="sForm__inner">
+
+    <div class="sForm__item">
+      <label class="visually-hidden" for="name_news">Название новости</label>
+      <input class="sForm__input" id="name_news" type="text" name="name_news" value="Название новости" placeholder="Название новости">
+    </div>
+
+    <div class="sForm__item">
+      <div class="sForm__linear sD-grid">
+        <label class="sForm__label" for="date">Дата публикации</label>
+        <input class="sForm__input" id="date" type="text" name="date" value="01.10.22" placeholder="01.10.22">
+
+        <label class="sForm__label" for="time">время</label>
+        <input class="sForm__input" id="time" type="text" name="time" value="21:00" placeholder="21:00">
+      </div>
+
+    </div>
+
+    <div class="sForm__item sForm__item--column-1">
+      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+    </div>
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+
+{{/ifpage}}

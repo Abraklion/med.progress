@@ -1,16 +1,16 @@
 ---
 layout: default
 
-title: Поликлиника | Личный кабинет
-description: Описание поликлиники
+title: Список пользователей | Кабинет регистратуры
+description: Описания список пользователей
 
 link: style.min.css
-script: ['runtime.js', 'main.js', 'personalAccount.js']
+script: ['runtime.js', 'main.js', 'adminAccount.js']
 
 lottiePlayer: false
 ---
 
-{{> header-record}}
+{{> header-registry}}
 
 <main>
 
@@ -20,9 +20,7 @@ lottiePlayer: false
 
       <div class="personal__inner">
 
-        <img class="personal__img" src="assets/img/icon-plug3.svg" width="1180" height="450" alt="">
-
-        <h1 class="personal__title title">Поликлиника №52</h1>
+        <h1 class="personal__title title">Кабинет регистратуры</h1>
 
         <div class="sRow">
 
@@ -30,7 +28,7 @@ lottiePlayer: false
 
             <aside class="personal__sidebar sidebar">
 
-              {{> sidebar-menu-record}}
+              {{> sidebar-menu-registry}}
 
             </aside><!--/.sidebar-->
 
@@ -38,9 +36,9 @@ lottiePlayer: false
 
           <div class="sCol-9">
 
-            <div class="personal__content content content--hospital-full">
+            <div class="personal__content content content--users">
 
-              {{> personal-account}}
+              {{> admin-account}}
 
             </div><!--/.content-->
 
@@ -55,5 +53,6 @@ lottiePlayer: false
 
 </main>
 
-{{> footer}}
+{{> footer-admin}}
 
+{{> modal}}

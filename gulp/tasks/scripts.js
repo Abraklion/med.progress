@@ -23,9 +23,14 @@ module.exports = function () {
             import: './src/js/reg.js'
           },
 
-          // личный кабинет страницы
+          // личный кабинет | кабинет врача страницы
           personalAccount: {
             import: './src/js/personalAccount.js'
+          },
+
+          // кабинет администратора / регистратуры страницы
+          adminAccount: {
+            import: './src/js/adminAccount.js'
           },
         },
         output: {
