@@ -1,8 +1,8 @@
 ---
 layout: admin
 
-title: Список новостей | Кабинет регистратуры
-description: Описания список новостей
+title: Список страниц | Кабинет администратора
+description: Описания список страниц
 
 link: style.min.css
 script: ['runtime.js', 'main.js', 'adminAccount.js']
@@ -10,7 +10,7 @@ script: ['runtime.js', 'main.js', 'adminAccount.js']
 lottiePlayer: false
 ---
 
-{{> header-registry}}
+{{> header-admin}}
 
 <main>
 
@@ -20,7 +20,7 @@ lottiePlayer: false
 
       <div class="personal__inner">
 
-        <h1 class="personal__title title">Кабинет регистратуры</h1>
+        <h1 class="personal__title title">Кабинет администратора</h1>
 
         <div class="sRow">
 
@@ -28,7 +28,7 @@ lottiePlayer: false
 
             <aside class="personal__sidebar sidebar">
 
-              {{> sidebar-menu-registry}}
+              {{> sidebar-menu-admin}}
 
             </aside><!--/.sidebar-->
 
@@ -36,7 +36,7 @@ lottiePlayer: false
 
           <div class="sCol-9">
 
-            <div class="personal__content content content--news">
+            <div class="personal__content content content--page">
 
               {{> admin-account}}
 

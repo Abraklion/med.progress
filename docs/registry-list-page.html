@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Список новостей | Кабинет администратора</title>
+  <title>Список страниц | Кабинет регистратуры</title>
 
   <meta name="viewport" content="width=1220, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описания список новостей">
+  <meta name="description" content="Описания список страниц">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -67,7 +67,7 @@
                         <svg width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                         </svg>
-                        Пользователи
+                        Врачи
                       </a>
                     </li>
                     <li class="menu__item">
@@ -151,7 +151,7 @@
 
         <div class="personal__inner">
 
-          <h1 class="personal__title title">Кабинет администратора</h1>
+          <h1 class="personal__title title">Кабинет регистратуры</h1>
 
           <div class="sRow">
 
@@ -165,7 +165,7 @@
                       <svg width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
-                      Пользователи
+                      Врачи
                     </a>
                   </li>
                   <li class="menu__item">
@@ -200,41 +200,27 @@
 
             <div class="sCol-9">
 
-              <div class="personal__content content content--news">
+              <div class="personal__content content content--page">
 
-                <!--Список новостей-->
-                <h2 class="content__title title">Список новостей</h2>
+                <!--Список страниц-->
+                <h2 class="content__title title">Список страниц</h2>
 
-                <form action="" class="content__form-search sForm" method="post">
+                <form class="content__form-search sForm" action="" method="post">
 
                   <div class="sForm__inner">
 
                     <div class="sForm__item sForm__item--column-5">
-                      <label class="visually-hidden" for="name_news">Поиск по названию новости</label>
-                      <input class="sForm__input" id="name_news" type="text" name="name_news" placeholder="Поиск по названию">
-                    </div><!--/.sForm__item-->
-
-                    <div class="sForm__item sForm__item--column-4">
-                      <div class="sForm__linear sD-grid">
-                        <label class="sForm__label" for="start_date">от</label>
-                        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
-
-                        <label class="sForm__label" for="start_end">до</label>
-                        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
-                      </div>
+                      <label class="visually-hidden" for="name_page">Поиск по названию</label>
+                      <input class="sForm__input" id="name_page" type="text" name="name_page" placeholder="Поиск по названию">
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item sForm__item--column-1">
-                      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+                      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
                     </div><!--/.sForm__item-->
 
                   </div><!--/.sForm__inner-->
 
                 </form><!--/.sForm-->
-
-                <div class="content__btn-wrapper">
-                  <a class="sBtn sBtn-primary" href="">Добавить новость</a>
-                </div>
 
                 <div class="table">
 
@@ -245,29 +231,21 @@
                     <div class="table__col">
                       <b>Последнее редактировние</b>
                     </div>
-                    <div class="table__col">
-                      <b>Дата и время публикации</b>
-                    </div>
-                    <div class="table__col">
-                      <b>Статус новости</b>
-                    </div>
                   </div><!--/.table__row--header-->
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
@@ -278,19 +256,17 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
@@ -300,64 +276,17 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">опубликована</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не опубликована</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
@@ -368,19 +297,17 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
@@ -390,19 +317,17 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
@@ -413,19 +338,58 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
+                        <a class="table__icon" href="" title="Редактировать страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
+                        <a class="table__icon" href="" title="Удалить страницу">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip" title="О нас">О нас</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать страницу">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить страницу">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__icon" href="" title="Редактировать страницу">
+                          <svg width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__icon" href="" title="Удалить страницу">
                           <svg width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>

@@ -8,7 +8,7 @@
 
   <title>История операций | Кабинет регистратуры</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1220, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
   <meta name="description" content="Описания история операций">
@@ -220,11 +220,11 @@
                         <label class="sForm__label" for="start_end">до</label>
                         <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
                       </div>
-                    </div>
+                    </div><!--/.sForm__item-->
 
                     <div class="sForm__item sForm__item--column-1">
                       <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
-                    </div>
+                    </div><!--/.sForm__item-->
 
                   </div><!--/.sForm__inner-->
 
@@ -330,6 +330,20 @@
 
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
+
+  <section class="modal modal--confirm">
+
+    <div class="modal__inner">
+
+      <h2 class="modal__title">Вы желаете удалить пользователя?</h2>
+
+      <div class="modal__wrapper-btn">
+        <a class="modal__btn sBtn" href="">Удалить</a>
+        <a class="modal__btn sBtn" href="">Отмена</a>
+      </div>
+    </div><!--/.modal__inner"-->
+
+  </section><!--/.modal-->
 
 </body>
 
