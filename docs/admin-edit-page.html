@@ -28,14 +28,17 @@
       <div class="header__inner">
 
         <a href="" class="header__logo logo">
-          <img class="logo__img" src="assets/img/logo.svg" width="180" height="21" alt="Логотип MED.PROGRESS">
+          <picture>
+            <source media="(min-width: 576px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+          </picture>
         </a><!--/.logo-->
 
         <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
@@ -43,7 +46,7 @@
 
             <div class="sRow">
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <div class="navigation__menu-inner">
 
@@ -61,10 +64,10 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="navigation__menu menu">
+                  <ul class="navigation__menu menu sD-lg-none">
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                         </svg>
                         Пользователи
@@ -72,7 +75,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                         </svg>
                         Новости
@@ -80,7 +83,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                         </svg>
                         Редактор блоков
@@ -88,7 +91,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
                         </svg>
                         Выйти
@@ -100,7 +103,7 @@
 
               </div>
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <address class="navigation__contacts-inner">
 
@@ -162,7 +165,7 @@
                 <ul class="sidebar__menu menu">
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
                       Пользователи
@@ -170,7 +173,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                       </svg>
                       Новости
@@ -178,7 +181,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                       </svg>
                       Редактор блоков
@@ -186,7 +189,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
                       </svg>
                       Выйти
@@ -200,7 +203,7 @@
 
             <div class="sCol-9">
 
-              <div class="personal__content content content--edit-news">
+              <div class="personal__content content content--edit-page">
 
                 <!--Редактирование страниц-->
                 <h2 class="content__title title">Редактирование блока</h2>
@@ -215,10 +218,10 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__file-upload sD-grid">
+                      <div class="sForm__file-upload">
                         <div class="sForm__file-btn">
                           <button type="button">Choose file</button>
-                          <input class="sForm__input" type="file" name="photo__page">
+                          <input type="file" name="photo__page">
                         </div>
                         <div class="sForm__file-name">No file chosen</div>
                       </div>
@@ -234,7 +237,7 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__linear sD-grid">
+                      <div class="sForm__linear">
                         <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
                         <a class="sBtn sBtn-primary" href="">Отмена</a>
                       </div>

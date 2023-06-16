@@ -4,13 +4,11 @@
 
 // Изменить параметры по умолчанию
 @use 'library/sumbiot/general/variables' with (
-  $orientation: 'desktop-first',
-
   $container: (
-    sm: (breakpoint: 600px, max-width: none),
-    md: (breakpoint: 768px, max-width: 600px),
-    lg: (breakpoint: 992px, max-width: 720px),
-    xl: (breakpoint: 1200px, max-width: 960px)
+    sm: (breakpoint: 576px, max-width: 540px),
+    md: (breakpoint: 768px, max-width: 720px),
+    lg: (breakpoint: 992px, max-width: 960px),
+    xl: (breakpoint: 1200px, max-width: 1200px),
   ),
 
   $font-size-basic: 14px,
@@ -22,11 +20,30 @@
 // Шрифты
 @use "fonts";
 
-
 // Библиотека
 @use "library/sumbiot";
 
 // Блоки
+@use "components/slider";
+@use "components/burger";
+@use "components/logo";
+@use "components/contacts";
+@use "components/menu";
+@use "components/navigation";
+@use "components/title";
+@use "components/form";
+@use "components/hospital";
+@use "components/table";
+@use "components/breadcrumbs";
+
+@use "components/header";
+@use "components/info";
+@use "components/working-scheme";
+@use "components/registration";
+@use "components/personal";
+@use "components/sidebar";
+@use "components/content";
+@use "components/footer";
 
 
 

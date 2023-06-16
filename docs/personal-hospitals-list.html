@@ -28,14 +28,17 @@
       <div class="header__inner">
 
         <a href="" class="header__logo logo">
-          <img class="logo__img" src="assets/img/logo.svg" width="180" height="21" alt="Логотип MED.PROGRESS">
+          <picture>
+            <source media="(min-width: 576px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+          </picture>
         </a><!--/.logo-->
 
         <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
@@ -43,13 +46,13 @@
 
             <div class="sRow">
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <div class="navigation__menu-inner">
 
                   <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="menu">
+                  <ul class="navigation__menu menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">Главная</a>
                     </li>
@@ -61,10 +64,10 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="menu">
+                  <ul class="navigation__menu menu sD-lg-none">
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                         </svg>
                         Личные данные
@@ -72,7 +75,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                         </svg>
                         Медицинские учреждения
@@ -80,7 +83,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
                         </svg>
                         Выписка
@@ -92,7 +95,7 @@
 
               </div>
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <address class="navigation__contacts-inner">
 
@@ -147,14 +150,14 @@
 
           <div class="sRow">
 
-            <div class="sCol-3">
+            <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
 
               <aside class="personal__sidebar sidebar">
 
                 <ul class="sidebar__menu menu">
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
                       Личные данные
@@ -162,7 +165,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                       </svg>
                       Медицинские учреждения
@@ -170,7 +173,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
                       </svg>
                       Выписка
@@ -182,7 +185,7 @@
 
             </div>
 
-            <div class="sCol-9">
+            <div class="sCol-lg-8 sCol-xl-9">
 
               <div class="personal__content content content--hospitals-list">
 
@@ -191,15 +194,17 @@
 
                   <h2 class="content__title title">
                     Мои медицинские учреждения
-                    <a href="" class="content__button sBtn">Редактировать</a>
+                    <a href="" class="sBtn">Редактировать</a>
                   </h2>
 
                   <div class="sRow">
 
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        <div class="hospital__img">
+                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        </div>
 
                         <div class="hospital__inner">
 
@@ -209,16 +214,18 @@
                             <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
 
                         </div>
                       </article><!--/.hospitals-->
 
                     </div>
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        <div class="hospital__img">
+                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        </div>
 
                         <div class="hospital__inner">
 
@@ -228,16 +235,18 @@
                             <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
 
                         </div>
                       </article><!--/.hospitals-->
 
                     </div>
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        <div class="hospital__img">
+                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
+                        </div>
 
                         <div class="hospital__inner">
 
@@ -247,7 +256,7 @@
                             <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
 
                         </div>
                       </article><!--/.hospitals-->
@@ -261,12 +270,12 @@
 
                   <h2 class="content__title title">
                     Другие медицинские учреждения
-                    <a href="" class="content__button sBtn">Посмотреть все</a>
+                    <a href="" class="sBtn">Посмотреть все</a>
                   </h2>
 
                   <div class="sRow">
 
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
                         <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
@@ -285,7 +294,7 @@
                       </article><!--/.hospitals-->
 
                     </div>
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
                         <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
@@ -304,7 +313,7 @@
                       </article><!--/.hospitals-->
 
                     </div>
-                    <div class="sCol">
+                    <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
                         <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
@@ -349,7 +358,7 @@
           <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
         </a><!--/.logo-->
 
-        <ul class="footer__menu menu">
+        <ul class="footer__menu menu sD-none sD-lg-flex">
           <li class="menu__item">
             <a href="" class="menu__link">Главная</a>
           </li>

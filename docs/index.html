@@ -28,14 +28,17 @@
       <div class="header__inner">
 
         <a href="" class="header__logo logo">
-          <img class="logo__img" src="assets/img/logo.svg" width="180" height="21" alt="Логотип MED.PROGRESS">
+          <picture>
+            <source media="(min-width: 576px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+          </picture>
         </a><!--/.logo-->
 
         <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
@@ -43,13 +46,13 @@
 
             <div class="sRow">
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <div class="navigation__menu-inner">
 
                   <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="menu">
+                  <ul class="navigation__menu menu">
                     <li class="menu__item">
                       <a href="" class="menu__link">Главная</a>
                     </li>
@@ -61,10 +64,10 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="menu">
+                  <ul class="navigation__menu menu sD-lg-none">
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                         </svg>
                         Личные данные
@@ -72,7 +75,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                         </svg>
                         Медицинские учреждения
@@ -80,7 +83,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
                         </svg>
                         Выписка
@@ -92,7 +95,7 @@
 
               </div>
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <address class="navigation__contacts-inner">
 
@@ -164,17 +167,23 @@
                     <label class="visually-hidden" for="password">Введите пароль</label>
                     <div class="sForm__password-inner">
                       <input class="sForm__input" id="password" type="password" name="password">
-                      <button type="button" class="sForm__eye" title="Заказать пароль"></button>
+                      <button type="button" class="sForm__eye" title="Показать пароль"></button>
                     </div>
                     <a class="sForm__link" href="">Восстановить пароль</a>
                   </div>
 
-                  <div class="sForm__item sForm__item--column-6">
-                    <a class="info__button sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
+                  <div class="sForm__item">
+                    <div class="sForm__linear">
+                      <a class="sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
+                      <button class="sBtn sBtn-primary" type="submit">Войти</button>
+                    </div>
                   </div>
 
-                  <div class="sForm__item sForm__item--column-6">
-                    <button class="info__button sBtn sBtn-primary" type="submit">Войти</button>
+                  <div class="sForm__item">
+                    <p class="sForm__text">Нет аккаунта? Пройдите короткую регистрацию</p>
+                    <p class="sForm__text">Остались вопросы?
+                      <a class="sForm__link" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
+                    </p>
                   </div>
 
                 </div>
@@ -185,20 +194,20 @@
 
             <div class="sCol">
 
-              <ul class="info__slider slider">
-                <li>
+              <div class="info__slider slider">
+                <div class="slider__item">
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
-                </li>
-                <li>
+                </div>
+                <div class="slider__item" hidden>
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
-                </li>
-                <li>
+                </div>
+                <div class="slider__item" hidden>
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
-                </li>
-              </ul><!--/.slider-->
+                </div>
+              </div><!--/.slider-->
 
             </div>
 
@@ -219,40 +228,40 @@
 
           <ul class="sRow">
 
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
-            <li class="sCol-4">
+            <li class="sCol-md-4">
               <div class="working-scheme__item">
-                <img src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p>This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
               </div><!--/.working-scheme__item-->
             </li>
 
@@ -275,7 +284,7 @@
           <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
         </a><!--/.logo-->
 
-        <ul class="footer__menu menu">
+        <ul class="footer__menu menu sD-none sD-lg-flex">
           <li class="menu__item">
             <a href="" class="menu__link">Главная</a>
           </li>

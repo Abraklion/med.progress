@@ -28,14 +28,17 @@
       <div class="header__inner">
 
         <a href="" class="header__logo logo">
-          <img class="logo__img" src="assets/img/logo.svg" width="180" height="21" alt="Логотип MED.PROGRESS">
+          <picture>
+            <source media="(min-width: 576px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+          </picture>
         </a><!--/.logo-->
 
         <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
@@ -43,7 +46,7 @@
 
             <div class="sRow">
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <div class="navigation__menu-inner">
 
@@ -61,10 +64,10 @@
                     </li>
                   </ul><!--/.menu-->
 
-                  <ul class="navigation__menu menu">
+                  <ul class="navigation__menu menu sD-lg-none">
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                         </svg>
                         Пользователи
@@ -72,7 +75,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                         </svg>
                         Новости
@@ -80,7 +83,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                         </svg>
                         Редактор блоков
@@ -88,7 +91,7 @@
                     </li>
                     <li class="menu__item">
                       <a href="" class="menu__link">
-                        <svg width="30" height="30" aria-hidden="true">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                           <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
                         </svg>
                         Выйти
@@ -100,7 +103,7 @@
 
               </div>
 
-              <div class="sCol-6">
+              <div class="sCol-md-6">
 
                 <address class="navigation__contacts-inner">
 
@@ -162,7 +165,7 @@
                 <ul class="sidebar__menu menu">
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
                       Пользователи
@@ -170,7 +173,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                       </svg>
                       Новости
@@ -178,7 +181,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                       </svg>
                       Редактор блоков
@@ -186,7 +189,7 @@
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
-                      <svg width="30" height="30" aria-hidden="true">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
                       </svg>
                       Выйти
@@ -215,24 +218,24 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item sForm__item--column-4">
-                      <div class="sForm__linear sD-grid">
+                      <div class="sForm__linear">
                         <label class="sForm__label" for="start_date">от</label>
                         <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
 
-                        <label class="sForm__label" for="start_end">до</label>
-                        <input class="sForm__input" id="start_end" type="text" name="start_end" placeholder="21:00">
+                        <label class="sForm__label" for="end_date">до</label>
+                        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="21:00">
                       </div>
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item sForm__item--column-1">
-                      <button class="content__button sBtn sBtn-primary" type="submit">Вывести</button>
+                      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
                     </div><!--/.sForm__item-->
 
                   </div><!--/.sForm__inner-->
 
                 </form><!--/.sForm-->
 
-                <div class="content__btn-wrapper">
+                <div class="content__wrapper-btn">
                   <a class="sBtn sBtn-primary" href="">Добавить новость</a>
                 </div>
 
@@ -262,13 +265,13 @@
                     <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -285,13 +288,13 @@
                     <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -307,13 +310,13 @@
                     <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -330,13 +333,13 @@
                     <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -352,13 +355,13 @@
                     <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -375,13 +378,13 @@
                     <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -397,13 +400,13 @@
                     <div class="table__col">не опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -420,13 +423,13 @@
                     <div class="table__col">опубликована</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
-                        <a class="table__icon" href="" title="Редактировать новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Редактировать новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
                           </svg>
                         </a>
-                        <a class="table__icon" href="" title="Удалить новость">
-                          <svg width="26" height="26" aria-hidden="true">
+                        <a class="table__link" href="" title="Удалить новость">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
                           </svg>
                         </a>
@@ -482,7 +485,7 @@
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
 
-  <section class="modal modal--confirm">
+  <section class="modal modal--confirm" hidden>
 
     <div class="modal__inner">
 

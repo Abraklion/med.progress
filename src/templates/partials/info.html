@@ -26,17 +26,23 @@
                 <label class="visually-hidden" for="password">Введите пароль</label>
                 <div class="sForm__password-inner">
                   <input class="sForm__input" id="password" type="password" name="password">
-                  <button type="button" class="sForm__eye" title="Заказать пароль"></button>
+                  <button type="button" class="sForm__eye" title="Показать пароль"></button>
                 </div>
                 <a class="sForm__link" href="">Восстановить пароль</a>
               </div>
 
-              <div class="sForm__item sForm__item--column-6">
-                <a class="info__button sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
+              <div class="sForm__item">
+                <div class="sForm__linear">
+                  <a class="sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
+                  <button class="sBtn sBtn-primary" type="submit">Войти</button>
+                </div>
               </div>
 
-              <div class="sForm__item sForm__item--column-6">
-                <button class="info__button sBtn sBtn-primary" type="submit">Войти</button>
+              <div class="sForm__item">
+                <p class="sForm__text">Нет аккаунта? Пройдите короткую регистрацию</p>
+                <p class="sForm__text">Остались вопросы?
+                  <a class="sForm__link" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
+                </p>
               </div>
 
             </div>
@@ -47,20 +53,20 @@
 
         <div class="sCol">
 
-          <ul class="info__slider slider">
-            <li>
+          <div class="info__slider slider">
+            <div class="slider__item">
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
-            </li>
-            <li>
+            </div>
+            <div class="slider__item" hidden>
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
-            </li>
-            <li>
+            </div>
+            <div class="slider__item" hidden>
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
-            </li>
-          </ul><!--/.slider-->
+            </div>
+          </div><!--/.slider-->
 
         </div>
 

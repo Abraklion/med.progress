@@ -23,7 +23,7 @@ module.exports = function () {
             import: './src/js/reg.js'
           },
 
-          // личный кабинет | кабинет врача страницы
+          // личный кабинет / кабинет врача страницы
           personalAccount: {
             import: './src/js/personalAccount.js'
           },

@@ -1,4 +1,72 @@
 @use "../variables" as v;
-@use "../library/sumbiot/general/mixins/components/form" as mF;
 
-@include mF.form(v.$container,v.$orientation);
+.#{v.$prefix}Form{
+
+}
+
+.#{v.$prefix}Form__inner{
+
+}
+
+.#{v.$prefix}Form__item{
+
+}
+
+.#{v.$prefix}Form__label{
+
+}
+
+.#{v.$prefix}Form__input{
+
+}
+
+.#{v.$prefix}Form__password-inner{
+
+}
+
+.#{v.$prefix}Form__eye{
+
+}
+
+.#{v.$prefix}Form__link{
+
+}
+
+.#{v.$prefix}Form__linear{
+
+}
+
+.#{v.$prefix}Form__text{
+
+  &--big{
+
+  }
+}
+
+.#{v.$prefix}Form__file-upload{
+
+  & button{
+
+  }
+
+  & input {
+
+  }
+}
+
+.#{v.$prefix}Form__file-btn{
+
+}
+
+.#{v.$prefix}Form__file-name{
+
+}
+
+.#{v.$prefix}Form__preview{
+
+}
+
+.#{v.$prefix}Form__preview-img{
+
+}
+
