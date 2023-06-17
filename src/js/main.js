@@ -1,3 +1,19 @@
+import ModalBurger from './modules/burger'
 
-console.log('ok')
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  // бургер меню
+  new ModalBurger(
+    '.js-burger',
+    '.js-menu',
+    {
+      overflowHidden : true
+    }
+  ).init()
+
+  // показать пароль
+
+
+})
 

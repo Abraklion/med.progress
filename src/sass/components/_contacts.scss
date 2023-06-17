@@ -1,27 +1,76 @@
+@use "../variables" as v;
+@use "../mixins" as m;
 
 .contacts{
+  @include m.list();
 
+  font-style: normal;
+  font-size: 16px;
+
+  @include m.media('lg') {
+    font-size: 20px;
+  }
+
+  @include m.media('xl') {
+    font-size: 24px;
+  }
 }
 
 .contacts__item{
+  position: relative;
+
+  margin: 0 0 14px 0;
+  padding: 0 0 0 50px;
+
+  &:before{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   &--mail{
+
+    &:before{
+      background-image: url(../img/icon-mail.svg);
+    }
 
   }
 
   &--phone{
-
+    &:before{
+      background-image: url(../img/icon-phone.svg);
+    }
   }
 
   &--marker{
-
+    &:before{
+      background-image: url(../img/icon-marker.svg);
+    }
   }
 }
 
 .contacts__link{
+  display: inline-block;
 
+  padding: 5px 0;
+
+  color: v.$primary;
+
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 .contacts__address{
+  margin: 0 0 20px 0;
 
+  color: v.$primary;
 }

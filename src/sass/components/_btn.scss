@@ -1,0 +1,49 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+.btn{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  background-color: v.$white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat", sans-serif;
+
+  color: v.$primary;
+
+  text-align: center;
+  text-decoration: none;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  &:focus{
+    outline-width: 0;
+  }
+
+  @include m.media('lg') {
+    &:hover{
+
+    }
+
+    &:active{
+
+    }
+
+    &:focus{
+      outline-width: 1px;
+    }
+  }
+
+}

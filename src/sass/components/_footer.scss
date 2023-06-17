@@ -1,14 +1,32 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .footer{
+  background-color: #F1F1F1;
 
+  border-top: 1px solid #8F97B2;
+
+  @include m.media('lg') {
+    background-color: v.$white;
+  }
 }
 
 .footer__inner{
+  display: grid;
+  justify-items: center;
+  align-items: center;
 
+  min-height: 75px;
+
+  @include m.media('lg') {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo{
-
+  width: 180px;
+  height: 20px;
 }
 
 .footer__menu{

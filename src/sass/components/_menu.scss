@@ -1,14 +1,58 @@
+@use "../variables" as v;
+@use "../mixins" as m;
 
 .menu{
+  @include m.list();
 
+  font-size: 22px;
+
+  @include m.media('lg') {
+    font-size: 24px;
+  }
+
+  &--footer{
+    @include m.media('lg') {
+      font-size: 14px;
+
+      .menu__item{
+        margin: 0 0 0 10px;
+      }
+
+      .menu__link{
+        text-decoration: underline;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 .menu__item{
+  margin: 0 0 16px 0;
 
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .menu__link{
+  padding: 5px 0;
 
+  color: v.$primary;
+
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+
+    color: v.$primary2;
+  }
+
+  @include m.media('lg') {
+    padding: 3px 0;
+  }
 }
 
 .menu__icon{

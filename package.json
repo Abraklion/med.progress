@@ -60,5 +60,9 @@
     "last 1 version",
     "> 1%",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "slick-carousel": "^1.8.1"
+  }
 }

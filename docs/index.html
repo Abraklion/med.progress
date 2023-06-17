@@ -15,12 +15,15 @@
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/slick.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/index.js"></script>
 </head>
 
-<body>
+<body class="page__body">
 
   <header class="header">
     <div class="sContainer">
@@ -29,8 +32,8 @@
 
         <a href="" class="header__logo logo">
           <picture>
-            <source media="(min-width: 576px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
-            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+            <source media="(min-width: 992px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="36" height="21" alt="Логотип MED.PROGRESS">
           </picture>
         </a><!--/.logo-->
 
@@ -38,96 +41,73 @@
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
-          <div class="navigation__inner">
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-            <div class="sRow">
+            <div class="sContainer">
 
-              <div class="sCol-md-6">
+              <div class="sRow">
 
-                <div class="navigation__menu-inner">
+                <div class="sCol-md-6">
 
-                  <h2 class="navigation__title title">Меню</h2>
+                  <div class="navigation__menu-inner">
 
-                  <ul class="navigation__menu menu">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Сервисы</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">О нас</a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu sD-lg-none">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                        </svg>
-                        Личные данные
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                        </svg>
-                        Медицинские учреждения
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
-                        </svg>
-                        Выписка
-                      </a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
+
+                </div>
+
+                <div class="sCol-md-6">
+
+                  <address class="navigation__contacts-inner">
+
+                    <h2 class="navigation__title title">Контакты</h2>
+
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
+
+                  </address>
 
                 </div>
 
               </div>
 
-              <div class="sCol-md-6">
-
-                <address class="navigation__contacts-inner">
-
-                  <h2 class="navigation__title title">Контакты</h2>
-
-                  <ul class="navigation__contacts contacts">
-                    <li class="contacts__item contacts__item--mail">
-                      <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
-                    </li>
-                    <li class="contacts__item contacts__item--phone">
-                      <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
-                    </li>
-                    <li class="contacts__item contacts__item--marker">
-                      <p class="contacts__address">
-                        ООО «CIRCLE SCHOOL» <br>
-                        ИНН 0273908137 <br>
-                        КПП 027701001 <br>
-                        ОГРН 1160280082896
-                      </p>
-                      <p class="contacts__address">
-                        450065, Республика Башкортостан, <br>
-                        г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
-                        по будням с 9:00 до 18:00
-                      </p>
-                    </li>
-                  </ul><!--/.contacts-->
-
-                </address>
-
-              </div>
-
-            </div>
+            </div><!--/.sContainer-->
 
           </div>
 
@@ -148,7 +128,7 @@
 
           <div class="sRow">
 
-            <div class="sCol">
+            <div class="sCol sCol-lg-6">
 
               <h1 class="info__title title">Единая система оплаты медицинских учреждений</h1>
 
@@ -156,33 +136,33 @@
 
               <form class="info__form sForm" action="" method="post">
 
-                <div class="sForm__inner">
+                <div class="sForm__inner sG-row-gap-20">
 
                   <div class="sForm__item">
                     <label class="visually-hidden" for="login">Введите логин</label>
-                    <input class="sForm__input" id="login" type="text" name="login" placeholder="email@email.com">
+                    <input class="sForm__input" id="login" type="email" name="login" placeholder="email@email.com" required>
                   </div>
 
                   <div class="sForm__item">
                     <label class="visually-hidden" for="password">Введите пароль</label>
                     <div class="sForm__password-inner">
-                      <input class="sForm__input" id="password" type="password" name="password">
-                      <button type="button" class="sForm__eye" title="Показать пароль"></button>
+                      <input class="sForm__input sPr-45 js-password" id="password" type="password" name="password" required>
+                      <button class="sForm__eye js-password-btn" type="button" title="Показать пароль"></button>
                     </div>
-                    <a class="sForm__link" href="">Восстановить пароль</a>
+                    <a class="sForm__link sD-inline-block sPb-10" href="">Восстановить пароль</a>
                   </div>
 
                   <div class="sForm__item">
                     <div class="sForm__linear">
-                      <a class="sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
-                      <button class="sBtn sBtn-primary" type="submit">Войти</button>
+                      <a class="btn" href="registration.html">Зарегистрироваться</a>
+                      <button class="btn sFw-500" type="submit">Войти</button>
                     </div>
                   </div>
 
                   <div class="sForm__item">
                     <p class="sForm__text">Нет аккаунта? Пройдите короткую регистрацию</p>
                     <p class="sForm__text">Остались вопросы?
-                      <a class="sForm__link" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
+                      <a class="sForm__link sForm__link--light" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
                     </p>
                   </div>
 
@@ -192,18 +172,18 @@
 
             </div>
 
-            <div class="sCol">
+            <div class="sCol-lg-6 sD-none sD-lg-block">
 
               <div class="info__slider slider">
                 <div class="slider__item">
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
                 </div>
-                <div class="slider__item" hidden>
+                <div class="slider__item">
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
                 </div>
-                <div class="slider__item" hidden>
+                <div class="slider__item">
                   <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
                   <p class="slider__text">медицинские учреждени</p>
                 </div>
@@ -226,46 +206,58 @@
 
           <h2 class="working-scheme__title title">Как это работает</h2>
 
-          <ul class="sRow">
+          <div class="sRow sGy-4">
 
-            <li class="sCol-md-4">
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
-            <li class="sCol-md-4">
+            </div>
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
-            <li class="sCol-md-4">
+            </div>
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
-            <li class="sCol-md-4">
+            </div>
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
-            <li class="sCol-md-4">
+            </div>
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
-            <li class="sCol-md-4">
+            </div>
+            <div class="sCol-md-4">
               <div class="working-scheme__item">
-                <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
-                <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                <div class="working-scheme__item-inner">
+                  <img class="working-scheme__img" src="assets/img/icon-plug.svg" width="80" height="80" alt="">
+                  <p class="working-scheme__text">This book is a treatise on the theory of ethics, very popular during the Renaissance</p>
+                </div>
               </div><!--/.working-scheme__item-->
-            </li>
+            </div>
 
-          </ul>
+          </div>
 
         </div><!--/.working-scheme__inner-->
 
@@ -281,10 +273,10 @@
       <div class="footer__inner">
 
         <a href="" class="footer__logo logo">
-          <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="180" height="20" alt="Логотип MED.PROGRESS">
         </a><!--/.logo-->
 
-        <ul class="footer__menu menu sD-none sD-lg-flex">
+        <ul class="footer__menu menu menu--footer sD-none sD-lg-flex">
           <li class="menu__item">
             <a href="" class="menu__link">Главная</a>
           </li>

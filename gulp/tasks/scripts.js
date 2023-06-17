@@ -15,7 +15,8 @@ module.exports = function () {
 
           // главная страница
           index: {
-            import: './src/js/index.js'
+            import: './src/js/index.js',
+            dependOn: ['slick'],
           },
 
           // регистрация страница
@@ -32,9 +33,15 @@ module.exports = function () {
           adminAccount: {
             import: './src/js/adminAccount.js'
           },
+
+          // слайдер
+          'slick' : 'slick-carousel'
         },
         output: {
           filename: '[name].js'
+        },
+        externals: {
+          jquery: 'jQuery',
         },
         optimization: {
           runtimeChunk: 'single',

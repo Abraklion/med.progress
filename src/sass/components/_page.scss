@@ -1,0 +1,17 @@
+@use "../variables" as v;
+
+.page{
+  height: 100%;
+}
+
+body{
+  color: v.$primary;
+}
+
+.page__body{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr;
+  align-content: start;
+}

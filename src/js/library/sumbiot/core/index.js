@@ -32,9 +32,12 @@ export default class Core {
    * @return {void}
    */
   overflowBody(overflow= '',marginRight = '') {
-    document.body.style.overflow = overflow;
-    document.body.style.marginRight = marginRight ? `${marginRight}px` : '';
-  }
 
+    if (document.body.offsetHeight > document.documentElement.clientHeight) {
+      // проверяем а есть ли скрол вообще
+      document.body.style.overflow = overflow;
+      document.body.style.marginRight = marginRight ? `${marginRight}px` : '';
+    }
+  }
 
 }

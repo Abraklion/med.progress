@@ -7,7 +7,7 @@
 
       <div class="sRow">
 
-        <div class="sCol">
+        <div class="sCol sCol-lg-6">
 
           <h1 class="info__title title">Единая система оплаты медицинских учреждений</h1>
 
@@ -15,33 +15,33 @@
 
           <form class="info__form sForm" action="" method="post">
 
-            <div class="sForm__inner">
+            <div class="sForm__inner sG-row-gap-20">
 
               <div class="sForm__item">
                 <label class="visually-hidden" for="login">Введите логин</label>
-                <input class="sForm__input" id="login" type="text" name="login" placeholder="email@email.com">
+                <input class="sForm__input" id="login" type="email" name="login" placeholder="email@email.com" required>
               </div>
 
               <div class="sForm__item">
                 <label class="visually-hidden" for="password">Введите пароль</label>
                 <div class="sForm__password-inner">
-                  <input class="sForm__input" id="password" type="password" name="password">
-                  <button type="button" class="sForm__eye" title="Показать пароль"></button>
+                  <input class="sForm__input sPr-45 js-password" id="password" type="password" name="password" required>
+                  <button class="sForm__eye js-password-btn" type="button" title="Показать пароль"></button>
                 </div>
-                <a class="sForm__link" href="">Восстановить пароль</a>
+                <a class="sForm__link sD-inline-block sPb-10" href="">Восстановить пароль</a>
               </div>
 
               <div class="sForm__item">
                 <div class="sForm__linear">
-                  <a class="sBtn sBtn-primary" href="registration.html">Зарегистрироваться</a>
-                  <button class="sBtn sBtn-primary" type="submit">Войти</button>
+                  <a class="btn" href="registration.html">Зарегистрироваться</a>
+                  <button class="btn sFw-500" type="submit">Войти</button>
                 </div>
               </div>
 
               <div class="sForm__item">
                 <p class="sForm__text">Нет аккаунта? Пройдите короткую регистрацию</p>
                 <p class="sForm__text">Остались вопросы?
-                  <a class="sForm__link" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
+                  <a class="sForm__link sForm__link--light" href="mailto:admin@progressrb.ru">admin@progressrb.ru</a>
                 </p>
               </div>
 
@@ -51,18 +51,18 @@
 
         </div>
 
-        <div class="sCol">
+        <div class="sCol-lg-6 sD-none sD-lg-block">
 
           <div class="info__slider slider">
             <div class="slider__item">
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
             </div>
-            <div class="slider__item" hidden>
+            <div class="slider__item">
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
             </div>
-            <div class="slider__item" hidden>
+            <div class="slider__item">
               <img class="slider__img" src="assets/img/slide.svg" width="580" height="450" alt="">
               <p class="slider__text">медицинские учреждени</p>
             </div>

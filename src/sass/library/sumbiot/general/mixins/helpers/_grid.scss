@@ -19,4 +19,10 @@
     ),'center', $orientation);
   }
 
+  .#{$prefix}G-row-gap{
+    @include m.rulesBreakpoint($container,(
+      grid-row-gap: 20px
+    ),'20', $orientation);
+  }
+
 }

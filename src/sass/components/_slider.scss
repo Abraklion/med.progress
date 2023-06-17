@@ -1,3 +1,7 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+@use "slick-carousel/slick/slick"; //-> стили slick (подключение из node_modules)
 
 .slider{
 
@@ -8,9 +12,53 @@
 }
 
 .slider__img{
+  display: block;
 
+  margin: 0 0 20px 0;
 }
 
 .slider__text{
+  margin: 0 0 32px 0;
 
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+}
+
+// стилизация dots
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include m.list();
+
+  li{
+    margin: 0 5px;
+
+    &.slick-active{
+
+      button{
+        background-color: rgba(v.$primary2, 1);
+      }
+    }
+  }
+
+  button{
+    width: 10px;
+    height: 10px;
+
+    padding: 0;
+    border: 0;
+
+    background-color: rgba(v.$primary2, 0.25);
+
+    font-size: 0;
+    color: transparent;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
 }

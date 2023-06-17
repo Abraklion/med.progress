@@ -1,24 +1,101 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .working-scheme{
+  display: none;
 
+  background-color: #fff;
+
+  counter-reset: list-info;
+
+  user-select: none;
+
+  @include m.media('lg') {
+    display: block;
+  }
 }
 
 .working-scheme__inner{
+  padding: 80px 0;
 
+  @include m.media('xl') {
+    padding: 100px 0;
+  }
 }
 
 .working-scheme__title{
+  margin-bottom: 40px;
 
+  @include m.media('xl') {
+    margin-bottom: 60px;
+  }
 }
 
 .working-scheme__item{
+  position: relative;
 
+  &::before{
+    counter-increment: list-info;
+    content: counter(list-info);
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 80px;
+
+    font-weight: 700;
+    font-size: 96px;
+
+    text-align: center;
+
+    opacity: 0.5;
+
+    transform: translateY(-50%);
+    transition: 0.3s opacity ease;
+  }
+
+  &:hover {
+
+    &::before{
+      opacity: 1;
+    }
+
+    .working-scheme__item-inner{
+      background-color: v.$white;
+
+      box-shadow: 0 0 25px rgba(v.$black, 0.15);
+    }
+  }
+}
+
+.working-scheme__item-inner{
+  min-height: 209px;
+
+  padding: 20px;
+  margin-left: 80px;
+
+  background-color: rgba(v.$primary,0.05);
+
+  border-radius: 10px;
+
+  box-shadow: none;
+
+  transition: 0.3s box-shadow ease, 0.3s background-color ease;
 }
 
 .working-scheme__img{
+  display: block;
+  max-width: 80px;
+  max-height: 80px;
 
+  margin: 0 auto 20px auto;
 }
 
 .working-scheme__text{
+  max-height: 69px;
 
+  margin: 0;
+
+  overflow: hidden;
 }

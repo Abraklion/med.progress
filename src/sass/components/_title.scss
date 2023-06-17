@@ -1,4 +1,22 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .title{
+  margin: 0;
 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+
+  color: v.$primary;
+
+  text-transform: uppercase;
+
+  @include m.media('lg') {
+    font-size: 32px;
+  }
+
+  @include m.media('xl') {
+    font-size: 40px;
+  }
 }

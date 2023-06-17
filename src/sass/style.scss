@@ -29,14 +29,16 @@
 @use "components/logo";
 @use "components/contacts";
 @use "components/menu";
-@use "components/navigation";
 @use "components/title";
 @use "components/form";
 @use "components/hospital";
 @use "components/table";
 @use "components/breadcrumbs";
+@use "components/btn";
 
+@use "components/page";
 @use "components/header";
+@use "components/navigation";
 @use "components/info";
 @use "components/working-scheme";
 @use "components/registration";
