@@ -12,11 +12,21 @@
 
   text-transform: uppercase;
 
+  user-select: none;
+
   @include m.media('lg') {
     font-size: 32px;
   }
 
   @include m.media('xl') {
     font-size: 40px;
+  }
+
+  &--margin-left {
+
+    @include m.media-section(380,'sm') {
+      margin-left: 10px;
+    }
+
   }
 }

@@ -56,19 +56,7 @@
 
                     <h2 class="navigation__title title">Меню</h2>
 
-                    <ul class="navigation__menu menu">
-                      <li class="menu__item">
-                        <a href="" class="menu__link">Главная</a>
-                      </li>
-                      <li class="menu__item">
-                        <a href="" class="menu__link">Сервисы</a>
-                      </li>
-                      <li class="menu__item">
-                        <a href="" class="menu__link">О нас</a>
-                      </li>
-                    </ul><!--/.menu-->
-
-                    <ul class="navigation__menu menu sD-lg-none">
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
                       <li class="menu__item">
                         <a href="" class="menu__link">
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
@@ -92,6 +80,18 @@
                           </svg>
                           Выписка
                         </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
                       </li>
                     </ul><!--/.menu-->
 
@@ -152,7 +152,7 @@
 
         <div class="personal__inner">
 
-          <h1 class="personal__title title">Личный кабинет</h1>
+          <h1 class="personal__title title title--margin-left">Личный кабинет</h1>
 
           <div class="sRow">
 
@@ -160,7 +160,7 @@
 
               <aside class="personal__sidebar sidebar">
 
-                <ul class="sidebar__menu menu">
+                <ul class="sidebar__menu menu--icon menu">
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
@@ -198,30 +198,35 @@
                 <!--Медицинские учреждения-->
                 <div class="content__box">
 
-                  <h2 class="content__title title">
+                  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
                     Мои медицинские учреждения
-                    <a href="" class="sBtn">Редактировать</a>
+                    <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Редактировать</a>
                   </h2>
 
-                  <div class="sRow">
+                  <div class="sRow sGy-4">
 
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <div class="hospital__img">
-                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-                        </div>
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 
@@ -229,20 +234,25 @@
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <div class="hospital__img">
-                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-                        </div>
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 
@@ -250,20 +260,25 @@
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <div class="hospital__img">
-                          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-                        </div>
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__btn sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 
@@ -272,30 +287,37 @@
 
                 </div><!--/.content__box-->
 
-                <div class="content__box">
+                <div class="content__box sMb-0">
 
-                  <h2 class="content__title title">
+                  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
                     Другие медицинские учреждения
-                    <a href="" class="sBtn">Посмотреть все</a>
+                    <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Посмотреть все</a>
                   </h2>
 
-                  <div class="sRow">
+                  <div class="sRow sGy-4">
 
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title  sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 
@@ -303,18 +325,25 @@
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title  sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 
@@ -322,18 +351,25 @@
                     <div class="sCol-md-6 sCol-xl-4">
 
                       <article class="hospital">
-                        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-
                         <div class="hospital__inner">
-
-                          <div class="hospital__content">
-                            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-                            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                          <div class="hospital__img">
+                            <picture>
+                              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+                              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+                            </picture>
                           </div>
 
-                          <a href="" class="hospital__button sBtn">Узнать больше</a>
+                          <div class="hospital__inner-content">
 
+                            <div class="hospital__content">
+                              <h3 class="hospital__title title  sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+                              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                            </div>
+
+                            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+                          </div>
                         </div>
                       </article><!--/.hospitals-->
 

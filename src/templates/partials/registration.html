@@ -7,9 +7,9 @@
 
       <h1 class="registration__title title">Регистрация</h1>
 
-      <form class="registration__form sForm" action="" method="post">
+      <form class="registration__form sForm sForm--registration" id="registration" action="" method="post">
 
-        <div class="sForm__inner">
+        <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
 
           <div class="sForm__item">
             <div class="sForm__title">Заполните форму регистрации</div>
@@ -22,29 +22,23 @@
 
           <label class="sForm__item">
             <span class="sForm__label">Придумайте пароль</span>
-            <input class="sForm__input" type="password" name="password" placeholder="Введите пароль">
+            <input class="sForm__input" id="password" type="password" name="password" placeholder="Введите пароль">
           </label>
 
           <div class="sForm__item">
             <label for="repeat_password" class="sForm__label">Повторите пароль</label>
             <input class="sForm__input" id="repeat_password" type="password" name="repeat_password" placeholder="Повторите пароль">
-            <p class="sForm__text">
+            <p class="sForm__text sMt-10 sMb-lg-28">
               Уже есть аккаунт? Перейди на страницу
               <a class="sForm__link" href="">Главная</a>
             </p>
-          </div>
-
-          <div class="sForm__item">
-            <p class="sForm__text sForm__text--big">
+            <p class="sForm__text sD-none sD-lg-block sMb-lg-28 sForm__text--big">
               Нажимая кнопку «Регистрация», вы подтверждаете, что согласны на
               <a class="sForm__link" href="">обработку персональных данных</a>.
             </p>
-          </div>
+            <button class="btn btn--primary" type="submit">Регистрация</button>
 
-          <div class="sForm__item">
-            <button class="sBtn sBtn-primary" type="submit">Регистрация</button>
-
-            <p class="sForm__text">*При завершении регистрации на указанный электронный адрес будет отправлено письмо для активации</p>
+            <p class="sForm__text sMt-32">*При завершении регистрации на указанный электронный адрес будет отправлено письмо для активации</p>
           </div>
 
         </div><!--/.sForm__inner-->

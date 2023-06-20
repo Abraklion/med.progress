@@ -1,6 +1,5 @@
 import ModalBurger from './modules/burger'
 
-
 window.addEventListener('DOMContentLoaded', () => {
 
   // бургер меню

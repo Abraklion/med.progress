@@ -28,6 +28,8 @@
 
   cursor: pointer;
 
+  transition: all 0.2s ease;
+
   &:focus{
     outline-width: 0;
   }
@@ -43,6 +45,55 @@
 
     &:focus{
       outline-width: 1px;
+    }
+  }
+
+  &--primary {
+    background-color: v.$primary;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$primary,0);
+
+    .registration & {
+      width: 100%;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-width: 2px;
+
+      @include m.media('lg') {
+        width: 520px;
+      }
+    }
+
+    .content--data & {
+      padding: 10px 30px;
+    }
+
+    &:hover{
+      color: v.$primary;
+
+      background-color: v.$white;
+
+      border-color: v.$primary;
+    }
+  }
+
+  &--transparent {
+    border: 1px solid #F1F1F1;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+    .content--hospitals-list & {
+      padding: 10px 30px;
+    }
+
+    &:hover{
+      border-color: rgba(v.$primary,0.5);
+
+      box-shadow: none;
     }
   }
 

@@ -3,6 +3,19 @@
 
 .#{v.$prefix}Form{
 
+  &--registration{
+    background-color: v.$white;
+
+    padding: 10px 30px 30px 30px;
+
+    border: 2px solid #E9E9E9;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+
+    @include m.media('lg') {
+      padding: 30px 30px 30px 30px;
+    }
+  }
 }
 
 .#{v.$prefix}Form__inner{
@@ -14,7 +27,23 @@
 }
 
 .#{v.$prefix}Form__label{
+  margin: 0 0 20px 0;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #7D7D7D;
+
+  text-transform: none;
+
+  @include m.media('lg') {
+    font-size: 18px;
+  }
+
+  @include m.media('xl') {
+    font-size: 20px;
+  }
 }
 
 .#{v.$prefix}Form__input{
@@ -29,20 +58,69 @@
 
   color: #2C3D73;
 
-  border: none;
+  border: 1px solid rgba(v.$primary,0.5);
   border-radius: 10px;
 
+  transition: all 0.2s ease;
+
   &:focus{
-    box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.25), 0 0 0 1px v.$primary2;
+    box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+
+    border-color: #2C3D73;
   }
 
   .info & {
+    border: 1px solid rgba(v.$primary2,0);
 
     &:focus{
-      box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.25), 0 0 0 1px v.$primary2;
+      box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+      border-color: v.$primary2;
     }
 
   }
+
+  .info & {
+    border: 1px solid rgba(v.$primary2,0);
+
+    &:focus{
+      box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+      border-color: v.$primary2;
+    }
+
+  }
+
+}
+
+.#{v.$prefix}Form__valid{
+  border-color: v.$primary2;
+
+  color: v.$primary;
+
+  box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+}
+
+.#{v.$prefix}Form__invalid{
+  border-color: rgba(224, 49, 62, 0.5);
+
+  color: #E0313E;
+
+  &.sForm__input {
+    box-shadow: inset 0 0 0 1px rgba(224, 49, 62, 0.5);
+
+    &:focus{
+      box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+    }
+  }
+
+  .sForm__input + &{
+    display: block;
+
+    margin: 10px 0 0 0;
+  }
+}
+
+.#{v.$prefix}Form__valid-text{
+  color: #41BE94;
 }
 
 .#{v.$prefix}Form__password-inner{
@@ -111,11 +189,24 @@
   }
 }
 
+.#{v.$prefix}Form__title{
+  font-weight: 600;
+  font-size: 15px;
+
+  @include m.media('lg') {
+    font-size: 20px;
+  }
+
+  @include m.media('xl') {
+    font-size: 24px;
+  }
+}
+
 .#{v.$prefix}Form__text{
   margin: 0 0 10px 0;
 
   &--big{
-
+    font-size: 16px;
   }
 
   .info & {

@@ -25,4 +25,10 @@
     ),'20', $orientation);
   }
 
+  .#{$prefix}G-column-gap{
+    @include m.rulesBreakpoint($container,(
+      grid-column-gap: 20px
+    ),'20', $orientation);
+  }
+
 }

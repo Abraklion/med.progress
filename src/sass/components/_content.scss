@@ -1,5 +1,13 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .content{
+
+  @include m.media('lg') {
+    padding: 25px 0 25px 25px;
+
+    border-left: 1px solid rgba(v.$primary,0.25);
+  }
 
   &--data{
 
@@ -7,6 +15,18 @@
 
   &--hospitals-list{
 
+    @include m.media(380) {
+      padding: 0 10px;
+    }
+
+    @include m.media('sm') {
+      padding: 0;
+    }
+
+    @include m.media('lg') {
+      padding-top: 20px;
+      padding-bottom: 45px;
+    }
   }
 
   &--hospital-full{
@@ -55,11 +75,15 @@
 }
 
 .content__box{
-
+  margin: 0 0 40px 0;
 }
 
-.content-title{
+.content__title{
+  margin-bottom: 20px;
 
+  @include m.media('lg') {
+    margin-bottom: 30px;
+  }
 }
 
 .content__text{

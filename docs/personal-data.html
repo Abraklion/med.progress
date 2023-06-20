@@ -56,19 +56,7 @@
 
                     <h2 class="navigation__title title">Меню</h2>
 
-                    <ul class="navigation__menu menu">
-                      <li class="menu__item">
-                        <a href="" class="menu__link">Главная</a>
-                      </li>
-                      <li class="menu__item">
-                        <a href="" class="menu__link">Сервисы</a>
-                      </li>
-                      <li class="menu__item">
-                        <a href="" class="menu__link">О нас</a>
-                      </li>
-                    </ul><!--/.menu-->
-
-                    <ul class="navigation__menu menu sD-lg-none">
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
                       <li class="menu__item">
                         <a href="" class="menu__link">
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
@@ -92,6 +80,18 @@
                           </svg>
                           Выписка
                         </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
                       </li>
                     </ul><!--/.menu-->
 
@@ -160,7 +160,7 @@
 
               <aside class="personal__sidebar sidebar">
 
-                <ul class="sidebar__menu menu">
+                <ul class="sidebar__menu menu--icon menu">
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
@@ -199,28 +199,28 @@
                 <form action="" class="sForm" method="post">
 
                   <section class="content__box">
-                    <h2 class="content-title title">Личные данные</h2>
+                    <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">Личные данные</h2>
 
-                    <div class="sForm__inner">
+                    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="name">Имя</label>
                         <input class="sForm__input" id="name" type="text" name="name" placeholder="Имя">
                       </div>
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="family">Фамилия</label>
                         <input class="sForm__input" id="family" type="text" name="family" placeholder="Фамилия">
                       </div>
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="email">Почта</label>
                         <input class="sForm__input" id="email" type="text" name="email" placeholder="email@email.com">
                       </div>
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="phone">Телефон</label>
-                        <input class="sForm__input" id="phone" type="text" name="phone" placeholder="+7 (999) 123 45 67">
+                        <input class="sForm__input" id="phone" type="tel" name="phone" placeholder="+7 (999) 123 45 67">
                       </div>
 
                     </div>
@@ -228,16 +228,16 @@
                   </section><!--/.content__box-->
 
                   <section class="content__box">
-                    <h2 class="content__title title">Изменить пароль</h2>
+                    <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">Изменить пароль</h2>
 
                     <div class="sForm__inner">
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="password">Пароль</label>
                         <input class="sForm__input" id="password" type="text" name="password" placeholder="Пароль">
                       </div>
 
-                      <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="repeat_password">Повторите пароль</label>
                         <input class="sForm__input" id="repeat_password" type="text" name="repeat_password" placeholder="Повторите пароль">
                       </div>
@@ -248,8 +248,8 @@
 
                   <div class="sForm__inner">
 
-                    <div class="sForm__item sForm__item--column-6">
-                      <button class="sBtn sBtn-primary" type="submit">Сохранить</button>
+                    <div class="sForm__item sForm__item--column-lg-6">
+                      <button class="btn btn--primary" type="submit">Сохранить</button>
                     </div>
 
                   </div>

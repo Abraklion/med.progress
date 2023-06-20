@@ -21,7 +21,8 @@ module.exports = function () {
 
           // регистрация страница
           reg: {
-            import: './src/js/reg.js'
+            import: './src/js/reg.js',
+            dependOn: ['validation']
           },
 
           // личный кабинет / кабинет врача страницы
@@ -35,7 +36,12 @@ module.exports = function () {
           },
 
           // слайдер
-          'slick' : 'slick-carousel'
+          'slick' : 'slick-carousel',
+
+          // валидация
+          'validation' : {
+            import : ['jquery-validation', 'jquery-validation/dist/additional-methods'],
+          },
         },
         output: {
           filename: '[name].js'

@@ -4,37 +4,37 @@
 <form action="" class="sForm" method="post">
 
   <section class="content__box">
-    <h2 class="content-title title">Личные данные</h2>
+    <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">Личные данные</h2>
 
-    <div class="sForm__inner">
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="name">Имя</label>
         <input class="sForm__input" id="name" type="text" name="name" placeholder="Имя">
       </div>
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="family">Фамилия</label>
         <input class="sForm__input" id="family" type="text" name="family" placeholder="Фамилия">
       </div>
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="email">Почта</label>
         <input class="sForm__input" id="email" type="text" name="email" placeholder="email@email.com">
       </div>
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="phone">Телефон</label>
-        <input class="sForm__input" id="phone" type="text" name="phone" placeholder="+7 (999) 123 45 67">
+        <input class="sForm__input" id="phone" type="tel" name="phone" placeholder="+7 (999) 123 45 67">
       </div>
 
       {{#ifpage 'doctor-data'}}
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="city">Город</label>
         <input class="sForm__input" id="city" type="text" name="city" placeholder="Город">
       </div>
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="organization">Телефон</label>
         <input class="sForm__input" id="organization" type="text" name="organization" placeholder="Организация">
       </div>
@@ -45,16 +45,16 @@
 
 
   <section class="content__box">
-    <h2 class="content__title title">Изменить пароль</h2>
+    <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">Изменить пароль</h2>
 
     <div class="sForm__inner">
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="password">Пароль</label>
         <input class="sForm__input" id="password" type="text" name="password" placeholder="Пароль">
       </div>
 
-      <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="repeat_password">Повторите пароль</label>
         <input class="sForm__input" id="repeat_password" type="text" name="repeat_password" placeholder="Повторите пароль">
       </div>
@@ -65,8 +65,8 @@
 
   <div class="sForm__inner">
 
-    <div class="sForm__item sForm__item--column-6">
-      <button class="sBtn sBtn-primary" type="submit">Сохранить</button>
+    <div class="sForm__item sForm__item--column-lg-6">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
     </div>
 
   </div>
@@ -80,31 +80,36 @@
 <!--Медицинские учреждения-->
 <div class="content__box">
 
-  <h2 class="content__title title">
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
     Мои медицинские учреждения
-    <a href="" class="sBtn">Редактировать</a>
+    <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Редактировать</a>
   </h2>
 
-  <div class="sRow">
+  <div class="sRow sGy-4">
 
     {{#repeat 3}}
     <div class="sCol-md-6 sCol-xl-4">
 
       <article class="hospital">
-        <div class="hospital__img">
-          <img class="" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-        </div>
-
         <div class="hospital__inner">
-
-          <div class="hospital__content">
-            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+          <div class="hospital__img">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+            </picture>
           </div>
 
-          <a href="" class="hospital__btn sBtn">Узнать больше</a>
+          <div class="hospital__inner-content">
 
+            <div class="hospital__content">
+              <h3 class="hospital__title title sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+            </div>
+
+            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+          </div>
         </div>
       </article><!--/.hospitals-->
 
@@ -114,31 +119,38 @@
 
 </div><!--/.content__box-->
 
-<div class="content__box">
+<div class="content__box sMb-0">
 
-  <h2 class="content__title title">
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
     Другие медицинские учреждения
-    <a href="" class="sBtn">Посмотреть все</a>
+    <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Посмотреть все</a>
   </h2>
 
-  <div class="sRow">
+  <div class="sRow sGy-4">
 
     {{#repeat 3}}
     <div class="sCol-md-6 sCol-xl-4">
 
       <article class="hospital">
-        <img class="hospital__img" src="assets/img/icon-plug2.svg" width="232" height="125" alt="">
-
         <div class="hospital__inner">
-
-          <div class="hospital__content">
-            <h3 class="hospital__title title">Поликлиника 1</h3>
-
-            <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+          <div class="hospital__img">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/img/icon-plug2.svg" type="image/svg+xml">
+              <img class="" src="assets/img/icon-plug5.svg" width="300" height="125" alt="">
+            </picture>
           </div>
 
-          <a href="" class="hospital__button sBtn">Узнать больше</a>
+          <div class="hospital__inner-content">
 
+            <div class="hospital__content">
+              <h3 class="hospital__title title  sFw-500 sFz-16 sText-transform-none">Поликлиника 1</h3>
+
+              <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+            </div>
+
+            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+
+          </div>
         </div>
       </article><!--/.hospitals-->
 

@@ -14,13 +14,15 @@
 
       <nav class="header__navigation navigation">
 
-        <button class="navigation__burger burger js-burger" type="button">
+        <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button><!--/.burger-->
 
-        <div class="navigation__inner">
+        <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-          <div class="sRow">
+          <div class="sContainer">
+
+            <div class="sRow">
 
             <div class="sCol-md-6">
 
@@ -28,19 +30,7 @@
 
                 <h2 class="navigation__title title">Меню</h2>
 
-                <ul class="navigation__menu menu">
-                  <li class="menu__item">
-                    <a href="" class="menu__link">Главная</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">Сервисы</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">О нас</a>
-                  </li>
-                </ul><!--/.menu-->
-
-                <ul class="navigation__menu menu sD-lg-none">
+                <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
@@ -64,6 +54,18 @@
                       </svg>
                       Выписка
                     </a>
+                  </li>
+                </ul><!--/.menu-->
+
+                <ul class="navigation__menu menu">
+                  <li class="menu__item">
+                    <a href="" class="menu__link">Главная</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">Сервисы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">О нас</a>
                   </li>
                 </ul><!--/.menu-->
 
@@ -102,6 +104,8 @@
               </address>
 
             </div>
+
+          </div>
 
           </div>
 

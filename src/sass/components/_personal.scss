@@ -1,14 +1,32 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .personal{
 
 }
 
 .personal__inner{
+  padding: 20px 0 50px 0;
 
+  @include m.media('lg') {
+    padding: 80px 0;
+  }
+
+  @include m.media('xl') {
+    padding: 100px 0;
+  }
 }
 
 .personal__title{
+  margin: 0 0 40px 0;
 
+  @include m.media('lg') {
+    margin: 0 0 50px 0;
+  }
+
+  @include m.media('xl') {
+    margin: 0 0 70px 0;
+  }
 }
 
 .personal__sidebar{
