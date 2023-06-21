@@ -37,7 +37,7 @@ export default class FormRegistrationComponent extends Component {
 
     return $(this.$el).validate({
       // -> включить режим отладки
-      debug: true,
+      debug: false,
 
       // -> настройка полей формы (какие поля валидировать)
       rules: {

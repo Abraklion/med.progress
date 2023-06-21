@@ -1,0 +1,74 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  padding: 10px;
+
+  user-select: none;
+
+  background-color: transparent;
+}
+
+.modal__inner{
+  display: grid;
+  grid-row-gap: 20px;
+
+  width: 90%;
+  max-width: 300px;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  padding: 10px;
+
+  background-color: v.$white;
+
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(v.$black,0.25);
+
+  transform: translate(-50%,-50%);
+
+  @include m.media('lg') {
+    max-width: 420px;
+  }
+}
+
+.modal__title{
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.modal__message{
+  margin: 0;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+.modal__wrapper-btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.modal__btn{
+  padding: 10px 5px;
+
+  font-size: 12px;
+  line-height: 12px;
+
+  border-radius: 8px;
+}

@@ -1,30 +1,104 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .table{
 
-  &--header{
+  margin-bottom: 40px;
 
+  &--odd{
+
+    .table__row{
+
+      &:nth-child(odd) {
+        background-color: rgba(v.$primary, 0.05);
+      }
+    }
+  }
+
+  &--even{
+    .table__row{
+
+      &:nth-child(even) {
+        background-color: rgba(v.$primary, 0.05);
+      }
+    }
+  }
+
+  &--outline {
+    .table__row:not(.table__row--header){
+      //outline: 1px solid rgba(v.$white, 0.7);
+      //outline-offset: -1px;
+      margin-bottom: 1px;
+    }
+  }
+
+  &--hover{
+
+    .table__row:not(.table__row--header){
+
+      &:hover{
+        border-radius: 3px;
+
+        outline: none;
+
+        box-shadow: 0 0 0 3px rgba(v.$primary2,0.6);
+
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  &--v1 {
+    .table__row{
+      grid-template-columns: 75% 23%;
+      grid-column-gap: 2%;
+
+      @include m.media('md') {
+        grid-template-columns: 60% 20% 16%;
+      }
+    }
+  }
+
+  &--v2 {
+    .table__row{
+      grid-template-columns: 100px 1fr;
+    }
   }
 
 }
 
 .table__row{
+  display: grid;
+  grid-column-gap: 10px;
 
+  padding: 10px;
+
+  color: v.$primary;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+
+  &--header{
+    border-bottom: 1px solid rgba(v.$primary,0.5);
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &--success{
+    background-color: #c8ece0!important;
+  }
+
+  &--danger{
+    background-color: #efcfcf!important;
+  }
 }
 
 .table__col{
-
-}
-
-.table__clip{
-
-}
-
-.table__col{
-
-}
-
-.table__col{
-
+  overflow: hidden;
 }
 
 .table__wrapper-btn{

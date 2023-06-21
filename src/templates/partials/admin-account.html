@@ -1,29 +1,29 @@
 
 {{#ifpage 'admin-users' 'registry-users'}}
 <!--Список пользователей-->
-<h2 class="content__title title">Список пользователей</h2>
+<h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">Список пользователей</h2>
 
 <form action="" class="content__form-search sForm" method="post">
 
   <div class="sForm__inner">
 
-    <div class="sForm__item sForm__item--column-5">
+    <div class="sForm__item">
       <label class="visually-hidden" for="personal_account">Поиск по логину или № лицевого счёта</label>
       <input class="sForm__input" id="personal_account" type="text" name="personal_account" placeholder="Поиск по логину или № лицевого счёта">
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-4">
+    <div class="sForm__item">
       <div class="sForm__linear">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="00.00.00">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="21:00">
+        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="00.00.00">
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-1">
-      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
+    <div class="sForm__item">
+      <button class="btn btn--primary" type="submit">Вывести</button>
     </div><!--/.sForm__item-->
 
   </div><!--/.sForm__inner-->

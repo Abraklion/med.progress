@@ -16,9 +16,29 @@
       padding: 30px 30px 30px 30px;
     }
   }
+
+  &--confirm{
+    .#{v.$prefix}Form__label{
+      margin-bottom: 0;
+
+      font-weight: 400;
+      font-size: 16px;
+
+      color: v.$primary;
+    }
+  }
 }
 
 .#{v.$prefix}Form__inner{
+
+  .content__form-search &{
+    grid-template-columns: 355px 275px 103px;
+    justify-content: space-between;
+
+    & > * {
+      grid-column: auto;
+    }
+  }
 
 }
 
@@ -182,11 +202,22 @@
   grid-row-gap: 20px;
   grid-column-gap: 20px;
 
-  @include m.media('lg') {
-    grid-template-columns: 1fr 1fr;
+  &--v1{
 
-    grid-column-gap: 20px;
+    @include m.media('lg') {
+      grid-template-columns: 1fr 1fr;
+    }
+
   }
+
+  &--v2{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+
+  }
+
+
+
 }
 
 .#{v.$prefix}Form__title{

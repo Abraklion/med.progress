@@ -1,12 +1,56 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
 
 .breadcrumbs{
+  @include m.list();
 
+  font-size: 12px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs__item{
+  position: relative;
 
+  margin-right: 15px;
+  padding: 3px 0;
+
+  color: rgba(v.$black,0.5);
+
+  &::after{
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: -10px;
+
+    width: 3px;
+    height: 1px;
+
+    background-color: v.$primary;
+
+    transform: translate(-50%,0);
+  }
+
+  &:last-child{
+
+    &::after{
+      content: none;
+    }
+  }
 }
 
 .breadcrumbs__link{
+  text-decoration: none;
 
+  color: v.$primary;
+
+  transition: 0.2s color ease;
+
+  &:hover{
+    color: v.$primary2;
+  }
 }

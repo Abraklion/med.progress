@@ -196,11 +196,11 @@
               <div class="personal__content content content--record">
 
                 <!--Подтвердить запись к врачу-->
-                <h2 class="content__title title">Запись к врачу</h2>
+                <h2 class="content__title title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
 
-                <form action="" class="sForm" method="post">
+                <form action="" class="sForm sForm--confirm" method="post">
 
-                  <div class="sForm__inner">
+                  <div class="sForm__inner sG-row-gap-20">
 
                     <div class="sForm__item">
                       <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
@@ -234,9 +234,9 @@
                     </div>
 
                     <div class="sForm__item">
-                      <div class="sForm__linear">
-                        <button class="sBtn" type="submit">Подтвердить</button>
-                        <a class="sBtn" href="">Отмена</a>
+                      <div class="sForm__linear sForm__linear--v2">
+                        <button class="btn btn--success" type="submit">Подтвердить</button>
+                        <a class="btn btn--cancel" href="">Отмена</a>
                       </div>
                     </div>
 
@@ -284,6 +284,43 @@
 
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
+
+  <section class="modal modal--success" hidden>
+
+    <div class="sContainer">
+
+      <div class="modal__inner">
+
+        <h2 class="modal__title">Заявка на запись отправлена</h2>
+
+        <p class="modal__message">Отслеживайте статус записи в личном кабинете</p>
+
+        <div class="modal__wrapper-btn">
+          <a class="modal__btn btn btn--success" href="">В личный кабинет</a>
+          <a class="modal__btn btn btn--cancel" href="">Продолжить</a>
+        </div>
+      </div><!--/.modal__inner"-->
+
+    </div><!--/.sContainer-->
+
+  </section><!--/.modal-->
+
+  <section class="modal modal--error" hidden>
+
+    <div class="sContainer">
+
+      <div class="modal__inner">
+
+        <h2 class="modal__title sText-color-danger" style="">Ошибка!</h2>
+
+        <p class="modal__message">Повторите попытку позже</p>
+
+        <a class="modal__btn btn btn--cancel" href="">Назад</a>
+      </div><!--/.modal__inner"-->
+
+    </div><!--/.sContainer-->
+
+  </section><!--/.modal-->
 
 </body>
 

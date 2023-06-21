@@ -14,7 +14,10 @@
   $font-size-basic: 14px,
   $font-family-basic: "Montserrat",
 
-  $line-height-basic: 1.22
+  $line-height-basic: 1.22,
+
+  $success: #41BE94,
+  $danger: #E0313E
 );
 
 // Шрифты
@@ -35,6 +38,7 @@
 @use "components/table";
 @use "components/breadcrumbs";
 @use "components/btn";
+@use "components/modal";
 
 @use "components/page";
 @use "components/header";

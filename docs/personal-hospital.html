@@ -40,92 +40,96 @@
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
-          <div class="navigation__inner">
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-            <div class="sRow">
+            <div class="sContainer">
 
-              <div class="sCol-md-6">
+              <div class="sRow">
 
-                <div class="navigation__menu-inner">
+                <div class="sCol-md-6">
 
-                  <h2 class="navigation__title title">Меню</h2>
+                  <div class="navigation__menu-inner">
 
-                  <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-hospital" />
-                        </svg>
-                        О медицинском учреждении
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                        </svg>
-                        Услуги
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-map" />
-                        </svg>
-                        Местонахождение
-                      </a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Сервисы</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">О нас</a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-hospital" />
+                          </svg>
+                          О медицинском учреждении
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                          Услуги
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-map" />
+                          </svg>
+                          Местонахождение
+                        </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
 
                 </div>
 
-              </div>
+                <div class="sCol-md-6">
 
-              <div class="sCol-md-6">
+                  <address class="navigation__contacts-inner">
 
-                <address class="navigation__contacts-inner">
+                    <h2 class="navigation__title title">Контакты</h2>
 
-                  <h2 class="navigation__title title">Контакты</h2>
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
 
-                  <ul class="navigation__contacts contacts">
-                    <li class="contacts__item contacts__item--mail">
-                      <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
-                    </li>
-                    <li class="contacts__item contacts__item--phone">
-                      <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
-                    </li>
-                    <li class="contacts__item contacts__item--marker">
-                      <p class="contacts__address">
-                        ООО «CIRCLE SCHOOL» <br>
-                        ИНН 0273908137 <br>
-                        КПП 027701001 <br>
-                        ОГРН 1160280082896
-                      </p>
-                      <p class="contacts__address">
-                        450065, Республика Башкортостан, <br>
-                        г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
-                        по будням с 9:00 до 18:00
-                      </p>
-                    </li>
-                  </ul><!--/.contacts-->
+                  </address>
 
-                </address>
+                </div>
 
               </div>
 
@@ -146,13 +150,13 @@
 
       <div class="sContainer">
 
-        <div class="personal__inner">
+        <div class="personal__inner sPt-0">
 
           <div class="personal__img">
             <img src="assets/img/icon-plug3.svg" width="1180" height="450" alt="">
           </div>
 
-          <h1 class="personal__title title">Поликлиника №52</h1>
+          <h1 class="personal__title title sMt-24 sMt-lg-60 sMt-xl-100">Поликлиника №52</h1>
 
           <div class="sRow">
 
@@ -196,7 +200,7 @@
               <div class="personal__content content content--hospital-full">
 
                 <!--Поликлиника-->
-                <h2 class="content__title title">Немного о нас</h2>
+                <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-40 sText-transform-none">Немного о нас</h2>
                 <div class="content__text">
                   <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32</p>
                   <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>

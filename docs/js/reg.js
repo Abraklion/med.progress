@@ -50,7 +50,7 @@ class FormRegistrationComponent extends _core_component__WEBPACK_IMPORTED_MODULE
   _validate() {
     return jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.$el).validate({
       // -> включить режим отладки
-      debug: true,
+      debug: false,
       // -> настройка полей формы (какие поля валидировать)
       rules: {
         email: {

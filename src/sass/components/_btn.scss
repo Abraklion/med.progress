@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../variables" as v;
 @use "../library/sumbiot/general/mixins" as m;
 
@@ -81,6 +83,46 @@
     }
   }
 
+  &--success{
+    background-color: v.$success;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$success,0);
+
+    .sForm--confirm & {
+      padding: 10px 5px;
+
+      line-height: 14px;
+
+      border-radius: 3px;
+    }
+
+    &:hover{
+      background-color: color.scale(v.$success, $lightness: -3%);
+    }
+  }
+
+  &--cancel{
+    background-color: v.$cancel;
+
+    color: v.$primary;
+
+    border: 1px solid rgba(v.$cancel,0);
+
+    .sForm--confirm & {
+      padding: 10px 5px;
+
+      line-height: 14px;
+
+      border-radius: 3px;
+    }
+
+    &:hover{
+      background-color: color.scale(v.$cancel, $lightness: -3%);
+    }
+  }
+
   &--transparent {
     border: 1px solid #F1F1F1;
 
@@ -88,6 +130,18 @@
 
     .content--hospitals-list & {
       padding: 10px 30px;
+    }
+
+    .content--extract & {
+      padding: 10px 30px;
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content--record & {
+      padding: 10px 30px;
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     &:hover{

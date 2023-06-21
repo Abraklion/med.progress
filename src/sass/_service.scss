@@ -18,6 +18,18 @@
   clip: rect(0, 0, 0, 0);
 }
 
+.clip {
+  -webkit-line-clamp: 1; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+
+  //width: 100%;
+  //white-space: nowrap; /* Запрещаем перенос строк */
+  //overflow: hidden; /* Обрезаем все, что не помещается в область */
+  //text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
 .show {
   display: block;
 }
@@ -25,3 +37,5 @@
 .hide {
   display: none;
 }
+
+

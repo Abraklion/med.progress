@@ -38,100 +38,104 @@
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
-          <div class="navigation__inner">
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-            <div class="sRow">
+            <div class="sContainer">
 
-              <div class="sCol-md-6">
+              <div class="sRow">
 
-                <div class="navigation__menu-inner">
+                <div class="sCol-md-6">
 
-                  <h2 class="navigation__title title">Меню</h2>
+                  <div class="navigation__menu-inner">
 
-                  <ul class="navigation__menu menu menu--icon  sMb-32 sD-lg-none">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                        </svg>
-                        Пользователи
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                        </svg>
-                        Новости
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                        </svg>
-                        Редактор блоков
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
-                        </svg>
-                        Выйти
-                      </a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Сервисы</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">О нас</a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <ul class="navigation__menu menu menu--icon  sMb-32 sD-lg-none">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                          </svg>
+                          Пользователи
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                          Новости
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                          Редактор блоков
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                          </svg>
+                          Выйти
+                        </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
 
                 </div>
 
-              </div>
+                <div class="sCol-md-6">
 
-              <div class="sCol-md-6">
+                  <address class="navigation__contacts-inner">
 
-                <address class="navigation__contacts-inner">
+                    <h2 class="navigation__title title">Контакты</h2>
 
-                  <h2 class="navigation__title title">Контакты</h2>
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
 
-                  <ul class="navigation__contacts contacts">
-                    <li class="contacts__item contacts__item--mail">
-                      <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
-                    </li>
-                    <li class="contacts__item contacts__item--phone">
-                      <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
-                    </li>
-                    <li class="contacts__item contacts__item--marker">
-                      <p class="contacts__address">
-                        ООО «CIRCLE SCHOOL» <br>
-                        ИНН 0273908137 <br>
-                        КПП 027701001 <br>
-                        ОГРН 1160280082896
-                      </p>
-                      <p class="contacts__address">
-                        450065, Республика Башкортостан, <br>
-                        г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
-                        по будням с 9:00 до 18:00
-                      </p>
-                    </li>
-                  </ul><!--/.contacts-->
+                  </address>
 
-                </address>
+                </div>
 
               </div>
 
@@ -206,29 +210,29 @@
               <div class="personal__content content content--users">
 
                 <!--Список пользователей-->
-                <h2 class="content__title title">Список пользователей</h2>
+                <h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">Список пользователей</h2>
 
                 <form action="" class="content__form-search sForm" method="post">
 
                   <div class="sForm__inner">
 
-                    <div class="sForm__item sForm__item--column-5">
+                    <div class="sForm__item">
                       <label class="visually-hidden" for="personal_account">Поиск по логину или № лицевого счёта</label>
                       <input class="sForm__input" id="personal_account" type="text" name="personal_account" placeholder="Поиск по логину или № лицевого счёта">
                     </div><!--/.sForm__item-->
 
-                    <div class="sForm__item sForm__item--column-4">
+                    <div class="sForm__item">
                       <div class="sForm__linear">
                         <label class="sForm__label" for="start_date">от</label>
-                        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+                        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="00.00.00">
 
                         <label class="sForm__label" for="end_date">до</label>
-                        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="21:00">
+                        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="00.00.00">
                       </div>
                     </div><!--/.sForm__item-->
 
-                    <div class="sForm__item sForm__item--column-1">
-                      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
+                    <div class="sForm__item">
+                      <button class="btn btn--primary" type="submit">Вывести</button>
                     </div><!--/.sForm__item-->
 
                   </div><!--/.sForm__inner-->

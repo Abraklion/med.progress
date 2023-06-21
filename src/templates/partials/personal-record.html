@@ -1,15 +1,15 @@
 
 {{#ifpage 'personal-record-department'}}
 <!--Выбертие отделение-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
-    Выбертие отделение
+    Выберите отделение
   </li>
 </ul><!--/.breadcrumbs-->
 
-<div class="table">
+<div class="table table--odd table--hover">
   <a class="table__row" href="">
     <span class="table__col">Терапевтия</span>
   </a>
@@ -26,18 +26,18 @@
 
 {{#ifpage 'personal-record-service'}}
 <!--Выбертие услугу-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
-<ul class="content__title breadcrumbs">
+<ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+    <a class="breadcrumbs__link" href="">Выберите отделение</a>
   </li>
   <li class="breadcrumbs__item">
-    Выбертие услугу
+    Выберите услугу
   </li>
 </ul><!--/.breadcrumbs-->
 
-<div class="table">
+<div class="table table--odd table--hover">
   <a class="table__row" href="">
     <span class="table__col">Первичный приём</span>
   </a>
@@ -51,21 +51,21 @@
 
 {{#ifpage 'personal-record-doctor'}}
 <!--Выбертие врача-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+    <a class="breadcrumbs__link" href="">Выберите отделение</a>
   </li>
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Рентген</a>
   </li>
   <li class="breadcrumbs__item">
-    Выбертие врача
+    Выберите врача
   </li>
 </ul><!--/.breadcrumbs-->
 
-<div class="table">
+<div class="table table--odd table--hover">
   <a class="table__row" href="">
     <span class="table__col">Иванов Иван Иванович</span>
   </a>
@@ -79,11 +79,11 @@
 
 {{#ifpage 'personal-record-date'}}
 <!--Выбертие дату-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+    <a class="breadcrumbs__link" href="">Выберите отделение</a>
   </li>
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Рентген</a>
@@ -92,11 +92,11 @@
     <a class="breadcrumbs__link" href="">Выбертие врача</a>
   </li>
   <li class="breadcrumbs__item">
-    Выбертие дату
+    Выберите дату
   </li>
 </ul><!--/.breadcrumbs-->
 
-<div class="table">
+<div class="table table--even table--hover table--v2">
 
   <div class="table__row table__row--header">
     <div class="table__col">
@@ -123,34 +123,39 @@
   {{/repeat}}
 </div><!--/.table-->
 
-<a href="" class="sBtn">Еще</a>
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
 
 
 {{#ifpage 'personal-record-time' 'doctor-record-time'}}
 <!--Выбертие время-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link" href="">Выбертие отделение</a>
+    <a class="breadcrumbs__link" href="">Выберите отделение</a>
   </li>
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Рентген</a>
   </li>
   <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link" href="">Выбертие врача</a>
+    <a class="breadcrumbs__link" href="">Выберите врача</a>
   </li>
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">15.04.2022</a>
   </li>
   <li class="breadcrumbs__item">
-    Выбертие время
+    Выберите время
   </li>
 </ul><!--/.breadcrumbs-->
 
-<div class="table">
+{{#ifpage 'personal-record-time'}}
+<div class="table table--hover table--outline table--v2">
+{{/ifpage}}
+{{#ifpage 'doctor-record-time'}}
+<div class="table table--even table--hover table--outline table--v2">
+{{/ifpage}}
 
   <div class="table__row table__row--header">
     <div class="table__col">
@@ -163,15 +168,15 @@
 
   {{#ifpage 'personal-record-time'}}
   {{#repeat 2}}
-  <a class="table__row" href="">
+  <a class="table__row table__row--success" href="">
     <span class="table__col">12:20</span>
     <span class="table__col">Свободно</span>
   </a>
-  <a class="table__row" href="">
+  <a class="table__row table__row--danger" href="">
     <span class="table__col">15:15</span>
     <span class="table__col">Занято</span>
   </a>
-  <a class="table__row" href="">
+  <a class="table__row table__row--success" href="">
     <span class="table__col">17:00</span>
     <span class="table__col">Свободно</span>
   </a>
@@ -185,10 +190,14 @@
     <span class="table__col">Свободно</span>
   </a>
   <a class="table__row" href="">
+    <span class="table__col">12:20</span>
+    <span class="table__col">Свободно</span>
+  </a>
+  <a class="table__row table__row--success" href="">
     <span class="table__col">15:15</span>
     <span class="table__col">Запись</span>
   </a>
-  <a class="table__row" href="">
+  <a class="table__row table__row--danger" href="">
     <span class="table__col">17:00</span>
     <span class="table__col">Не подтверждено</span>
   </a>
@@ -201,11 +210,11 @@
 
 {{#ifpage 'personal-record-confirm' 'doctor-record-confirm'}}
 <!--Подтвердить запись к врачу-->
-<h2 class="content__title title">Запись к врачу</h2>
+<h2 class="content__title title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
 
-<form action="" class="sForm" method="post">
+<form action="" class="sForm sForm--confirm" method="post">
 
-  <div class="sForm__inner">
+  <div class="sForm__inner sG-row-gap-20">
 
     {{#ifpage 'doctor-record-confirm'}}
     <div class="sForm__item">
@@ -241,17 +250,12 @@
     </div>
 
     <div class="sForm__item">
-      <div class="sForm__linear">
-        <button class="sBtn" type="submit">Подтвердить</button>
-        <a class="sBtn" href="">Отмена</a>
+      <div class="sForm__linear sForm__linear--v2">
+        <button class="btn btn--success" type="submit">Подтвердить</button>
+        <a class="btn btn--cancel" href="">Отмена</a>
       </div>
     </div>
 
   </div><!--/.sForm__inner-->
 </form><!--/.sForm-->
 {{/ifpage}}
-
-
-
-
-

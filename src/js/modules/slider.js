@@ -40,8 +40,6 @@ export default class Slider {
 
     this.$window.on('resize', (e) => {
 
-      console.log(this)
-
       if(this.$window.outerWidth() < 992 && this.isInit) {
         this.$el.slick('unslick');
         this.isInit = false

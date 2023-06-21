@@ -1,5 +1,5 @@
 
-{{#ifpage 'personal-record-confirm'}}
+{{#ifpage 'personal-record-confirm' 'doctor-record-confirm'}}
 <section class="modal modal--success" hidden>
 
   <div class="sContainer">
@@ -11,8 +11,8 @@
       <p class="modal__message">Отслеживайте статус записи в личном кабинете</p>
 
       <div class="modal__wrapper-btn">
-        <a class="modal__btn sBtn" href="">В личный кабинет</a>
-        <a class="modal__btn sBtn" href="">Продолжить</a>
+        <a class="modal__btn btn btn--success" href="">В личный кабинет</a>
+        <a class="modal__btn btn btn--cancel" href="">Продолжить</a>
       </div>
     </div><!--/.modal__inner"-->
 
@@ -23,20 +23,18 @@
 
 
 
-{{#ifpage 'personal-record-confirm'}}
+{{#ifpage 'personal-record-confirm' 'doctor-record-confirm'}}
 <section class="modal modal--error" hidden>
 
   <div class="sContainer">
 
     <div class="modal__inner">
 
-      <h2 class="modal__title">Ошибка!</h2>
+      <h2 class="modal__title sText-color-danger" style="">Ошибка!</h2>
 
       <p class="modal__message">Повторите попытку позже</p>
 
-      <div class="modal__wrapper-btn">
-        <a class="modal__btn sBtn" href="">Назад</a>
-      </div>
+      <a class="modal__btn btn btn--cancel" href="">Назад</a>
     </div><!--/.modal__inner"-->
 
   </div><!--/.sContainer-->
