@@ -96,7 +96,7 @@ class Modal extends ___WEBPACK_IMPORTED_MODULE_0__["default"] {
     this._modalSelector = modalSelector;
     this.modal = document.querySelector(modalSelector);
     this._close = this.modal?.querySelector(closeSelector);
-    this._closeClickOverlay = closeClickOverlay || !this.modal?.dataset.sumbiotOverlay || this.modal?.dataset.sumbiotOverlay === 'true' || false;
+    this._closeClickOverlay = closeClickOverlay || this.modal?.dataset.sumbiotOverlay === 'true' || false;
     this._modalGroup = modalGroup;
     this._modalParent = modalParent || this.modal?.dataset.sumbiotParent || false;
     this._overflowHidden = overflowHidden || this.modal?.dataset.sumbiotOverflow && this.modal?.dataset.sumbiotOverflow === 'true' || false;
@@ -147,7 +147,7 @@ class Modal extends ___WEBPACK_IMPORTED_MODULE_0__["default"] {
   _showHandler() {
     document.addEventListener('click', e => {
       let target = e.target;
-      if (target && target.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector || target && target.parentElement.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector) {
+      if (target && target.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector || target && target.parentElement.matches(this._trigger) && target.parentElement.dataset.sumbiotTarget === this._modalSelector) {
         e.preventDefault();
         e.stopPropagation();
         if (target.parentElement.matches(this._trigger)) {
@@ -273,8 +273,6 @@ window.addEventListener('DOMContentLoaded', () => {
   new _modules_burger__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-burger', '.js-menu', {
     overflowHidden: true
   }).init();
-
-  // показать пароль
 });
 
 /***/ }),

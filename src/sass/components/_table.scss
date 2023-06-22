@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../variables" as v;
 @use "../library/sumbiot/general/mixins" as m;
 
@@ -49,6 +51,20 @@
     }
   }
 
+  &--hover-shadow{
+
+    .table__row:not(.table__row--header){
+
+      &:hover{
+
+        box-shadow: 0 0 15px 0 rgba(v.$black, 0.15);
+
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
   &--v1 {
     .table__row{
       grid-template-columns: 75% 23%;
@@ -63,6 +79,24 @@
   &--v2 {
     .table__row{
       grid-template-columns: 100px 1fr;
+    }
+  }
+
+  &--v3 {
+    .table__row{
+      align-items: center;
+
+      grid-template-columns: 193px 155px 145px 180px 100px;
+      grid-column-gap: 15px;
+    }
+  }
+
+  &--v4 {
+    .table__row{
+      align-items: center;
+
+      grid-template-columns: 263px 140px 140px 160px 70px;
+      grid-column-gap: 15px;
     }
   }
 
@@ -102,13 +136,40 @@
 }
 
 .table__wrapper-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  padding: 0 0 0 15px;
 }
 
 .table__link{
+  display:block;
 
+  text-decoration: none;
+
+  color: v.$primary;
+
+  opacity: 1;
+
+  transition: all 0.2s ease;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 1;
+  }
 }
 
 .table__icon{
+  display: block;
 
+  width: 21px;
+  height: 21px;
+
+  fill: currentColor;
+
+  pointer-events: none;
 }

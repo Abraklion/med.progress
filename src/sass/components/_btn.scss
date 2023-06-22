@@ -74,6 +74,18 @@
       padding: 10px 30px;
     }
 
+    .content__form-search &{
+      padding: 5px 19px;
+    }
+
+    .content--edit-user & {
+      padding: 10px 30px;
+    }
+
+    .content__wrapper-btn &{
+      padding: 5px 20px;
+    }
+
     &:hover{
       color: v.$primary;
 
@@ -123,26 +135,24 @@
     }
   }
 
+  &--error{
+    background-color: v.$danger;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$danger,0);
+
+    &:hover{
+      background-color: color.scale(v.$danger, $lightness: -3%);
+    }
+  }
+
   &--transparent {
     border: 1px solid #F1F1F1;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    .content--hospitals-list & {
-      padding: 10px 30px;
-    }
-
-    .content--extract & {
-      padding: 10px 30px;
-
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .content--record & {
-      padding: 10px 30px;
-
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+    padding: 10px 30px;
 
     &:hover{
       border-color: rgba(v.$primary,0.5);

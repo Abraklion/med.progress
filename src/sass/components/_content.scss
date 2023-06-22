@@ -93,7 +93,7 @@
 }
 
 .content__form-search{
-
+  margin: 0 0 50px 0;
 }
 
 .content__form-page{
@@ -101,7 +101,10 @@
 }
 
 .content__wrapper-btn{
+  display: flex;
+  justify-content: flex-end;
 
+  margin-bottom: 40px;
 }
 
 .content__breadcrumbs{

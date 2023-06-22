@@ -11,8 +11,5 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   ).init()
 
-  // показать пароль
-
-
 })
 

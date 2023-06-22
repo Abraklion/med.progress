@@ -17,7 +17,7 @@
   $line-height-basic: 1.22,
 
   $success: #41BE94,
-  $danger: #E0313E
+  $danger: #E41E2F
 );
 
 // Шрифты
@@ -39,6 +39,7 @@
 @use "components/breadcrumbs";
 @use "components/btn";
 @use "components/modal";
+@use "components/datepicker";
 
 @use "components/page";
 @use "components/header";

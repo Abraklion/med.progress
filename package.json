@@ -63,7 +63,9 @@
   ],
   "dependencies": {
     "jquery": "^3.7.0",
+    "jquery-ui": "^1.13.2",
     "jquery-validation": "^1.19.5",
+    "jquery.maskedinput": "^1.4.1",
     "slick-carousel": "^1.8.1"
   }
 }

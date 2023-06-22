@@ -41,7 +41,8 @@ export default class Modal extends ModalCore {
     this.modal = document.querySelector(modalSelector)
 
     this._close = this.modal?.querySelector(closeSelector)
-    this._closeClickOverlay = closeClickOverlay || !this.modal?.dataset.sumbiotOverlay || this.modal?.dataset.sumbiotOverlay === 'true' || false
+
+    this._closeClickOverlay = closeClickOverlay || this.modal?.dataset.sumbiotOverlay === 'true' || false
 
     this._modalGroup = modalGroup
 
@@ -106,7 +107,7 @@ export default class Modal extends ModalCore {
     document.addEventListener('click', (e) => {
       let target = e.target;
 
-      if (target && target.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector || target && target.parentElement.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector) {
+      if (target && target.matches(this._trigger) && target.dataset.sumbiotTarget === this._modalSelector || target && target.parentElement.matches(this._trigger) && target.parentElement.dataset.sumbiotTarget === this._modalSelector) {
         e.preventDefault()
         e.stopPropagation()
 

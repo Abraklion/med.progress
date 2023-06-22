@@ -32,11 +32,15 @@ module.exports = function () {
 
           // кабинет администратора / регистратуры страницы
           adminAccount: {
-            import: './src/js/adminAccount.js'
+            import: './src/js/adminAccount.js',
+            dependOn: ['datepicker']
           },
 
           // слайдер
           'slick' : 'slick-carousel',
+
+          // календарь
+          'datepicker' : 'jquery-ui/ui/widgets/datepicker',
 
           // валидация
           'validation' : {

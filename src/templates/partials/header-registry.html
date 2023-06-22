@@ -14,13 +14,15 @@
 
       <nav class="header__navigation navigation">
 
-        <button class="navigation__burger burger js-burger" type="button">
+        <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button><!--/.burger-->
 
-        <div class="navigation__inner">
+        <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-          <div class="sRow">
+          <div class="sContainer">
+
+            <div class="sRow">
 
             <div class="sCol-md-6">
 
@@ -113,7 +115,9 @@
 
           </div>
 
-        </div>
+          </div>
+
+        </div><!--/.sContainer-->
 
       </nav><!--/.navigation-->
 

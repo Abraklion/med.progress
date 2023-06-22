@@ -15,7 +15,10 @@
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/datepicker.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/adminAccount.js"></script>
 </head>
@@ -210,7 +213,9 @@
               <div class="personal__content content content--users">
 
                 <!--Список пользователей-->
-                <h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">Список пользователей</h2>
+                <h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">
+                  Список пользователей
+                </h2>
 
                 <form action="" class="content__form-search sForm" method="post">
 
@@ -222,12 +227,12 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__linear">
+                      <div class="sForm__linear sForm__linear--v3">
                         <label class="sForm__label" for="start_date">от</label>
-                        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="00.00.00">
+                        <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off">
 
                         <label class="sForm__label" for="end_date">до</label>
-                        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="00.00.00">
+                        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
                       </div>
                     </div><!--/.sForm__item-->
 
@@ -239,7 +244,7 @@
 
                 </form><!--/.sForm-->
 
-                <div class="table">
+                <div class="table table--even table--hover-shadow table--v3">
 
                   <div class="table__row table__row--header">
                     <div class="table__col">
@@ -258,28 +263,28 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не активированна</div>
+                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -288,28 +293,28 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">активированна</div>
+                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -317,87 +322,28 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не активированна</div>
+                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
-                    </div>
-                    <div class="table__col">
-                      <span class="table__clip">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="Редактировать пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
-                    </div>
-                    <div class="table__col">
-                      <span class="table__clip">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="Редактировать пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -406,28 +352,28 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">активированна</div>
+                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -435,28 +381,28 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">не активированна</div>
+                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -465,28 +411,87 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip">login_polzovatela</span>
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
                     </div>
                     <div class="table__col">
-                      <span class="table__clip">4752015698</span>
+                      <span class="clip" title="4752015698">4752015698</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">активированна</div>
+                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__link" href="" title="Редактировать пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
+                          </svg>
+                        </a>
+                        <a class="table__link" href="" title="История операций">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
+                          </svg>
+                        </a>
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="clip" title="4752015698">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
                     <div class="table__col">
                       <div class="table__wrapper-btn">
                         <a class="table__link" href="" title="Редактировать пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
                           </svg>
                         </a>
                         <a class="table__link" href="" title="История операций">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
                           </svg>
                         </a>
-                        <a class="table__link" href="" title="Удалить пользователя">
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
                           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                    </div>
+                    <div class="table__col">
+                      <span class="clip" title="4752015698">4752015698</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__link" href="" title="Редактировать пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min" />
+                          </svg>
+                        </a>
+                        <a class="table__link" href="" title="История операций">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
+                          </svg>
+                        </a>
+                        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
+                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min" />
                           </svg>
                         </a>
                       </div>
@@ -495,7 +500,7 @@
 
                 </div>
 
-                <a href="" class="sBtn">Еще</a>
+                <a href="" class="btn btn--transparent">Еще</a>
 
               </div><!--/.content-->
 
@@ -542,19 +547,21 @@
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
 
-  <section class="modal modal--confirm" hidden>
+  <!---->
+  <!--<section class="modal modal&#45;&#45;confirm" data-sumbiot-modal>-->
 
-    <div class="modal__inner">
+  <!--    <div class="modal__inner">-->
 
-      <h2 class="modal__title">Вы желаете удалить пользователя?</h2>
+  <!--      <h2 class="modal__title sFz-14">Вы желаете удалить пользователя?</h2>-->
 
-      <div class="modal__wrapper-btn">
-        <a class="modal__btn sBtn" href="">Удалить</a>
-        <a class="modal__btn sBtn" href="">Отмена</a>
-      </div>
-    </div><!--/.modal__inner"-->
+  <!--      <div class="modal__wrapper-btn">-->
+  <!--        <a class="modal__btn btn btn&#45;&#45;error" href="">Удалить</a>-->
+  <!--        <a class="modal__btn btn btn&#45;&#45;cancel" href="" data-sumbiot-modal-close>Отмена</a>-->
+  <!--      </div>-->
+  <!--    </div>&lt;!&ndash;/.modal__inner"&ndash;&gt;-->
 
-  </section><!--/.modal-->
+  <!--</section>&lt;!&ndash;/.modal&ndash;&gt;-->
+  <!---->
 
 </body>
 

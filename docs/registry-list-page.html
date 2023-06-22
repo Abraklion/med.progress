@@ -15,6 +15,8 @@
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
   <script defer src="js/runtime.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/adminAccount.js"></script>
@@ -38,106 +40,110 @@
 
         <nav class="header__navigation navigation">
 
-          <button class="navigation__burger burger js-burger" type="button">
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button><!--/.burger-->
 
-          <div class="navigation__inner">
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
 
-            <div class="sRow">
+            <div class="sContainer">
 
-              <div class="sCol-md-6">
+              <div class="sRow">
 
-                <div class="navigation__menu-inner">
+                <div class="sCol-md-6">
 
-                  <h2 class="navigation__title title">Меню</h2>
+                  <div class="navigation__menu-inner">
 
-                  <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                        </svg>
-                        Врачи
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
-                        </svg>
-                        Новости
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                        </svg>
-                        Редактор блоков
-                      </a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">
-                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                          <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
-                        </svg>
-                        Выйти
-                      </a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <h2 class="navigation__title title">Меню</h2>
 
-                  <ul class="navigation__menu menu">
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">Сервисы</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="" class="menu__link">О нас</a>
-                    </li>
-                  </ul><!--/.menu-->
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                          </svg>
+                          Врачи
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                          Новости
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                          Редактор блоков
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                          </svg>
+                          Выйти
+                        </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
+
+                </div>
+
+                <div class="sCol-md-6">
+
+                  <address class="navigation__contacts-inner">
+
+                    <h2 class="navigation__title title">Контакты</h2>
+
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
+
+                  </address>
 
                 </div>
 
               </div>
 
-              <div class="sCol-md-6">
-
-                <address class="navigation__contacts-inner">
-
-                  <h2 class="navigation__title title">Контакты</h2>
-
-                  <ul class="navigation__contacts contacts">
-                    <li class="contacts__item contacts__item--mail">
-                      <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
-                    </li>
-                    <li class="contacts__item contacts__item--phone">
-                      <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
-                    </li>
-                    <li class="contacts__item contacts__item--marker">
-                      <p class="contacts__address">
-                        ООО «CIRCLE SCHOOL» <br>
-                        ИНН 0273908137 <br>
-                        КПП 027701001 <br>
-                        ОГРН 1160280082896
-                      </p>
-                      <p class="contacts__address">
-                        450065, Республика Башкортостан, <br>
-                        г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
-                        по будням с 9:00 до 18:00
-                      </p>
-                    </li>
-                  </ul><!--/.contacts-->
-
-                </address>
-
-              </div>
-
             </div>
 
-          </div>
+          </div><!--/.sContainer-->
 
         </nav><!--/.navigation-->
 
@@ -238,7 +244,7 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="О нас">О нас</span>
+                      <span class="clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -259,7 +265,7 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
+                      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -279,48 +285,7 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="О нас">О нас</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="Редактировать страницу">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="Удалить страницу">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="Редактировать страницу">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
-                          </svg>
-                        </a>
-                        <a class="table__link" href="" title="Удалить страницу">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="table__clip" title="О нас">О нас</span>
+                      <span class="clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -341,7 +306,7 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
+                      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -361,7 +326,7 @@
                   </div><!--/.table__row-->
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="О нас">О нас</span>
+                      <span class="clip" title="О нас">О нас</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -382,7 +347,48 @@
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
+                      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__link" href="" title="Редактировать страницу">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__link" href="" title="Удалить страницу">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="clip" title="О нас">О нас</span>
+                    </div>
+                    <div class="table__col">02.12.24 12:34</div>
+                    <div class="table__col">
+                      <div class="table__wrapper-btn">
+                        <a class="table__link" href="" title="Редактировать страницу">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit" />
+                          </svg>
+                        </a>
+                        <a class="table__link" href="" title="Удалить страницу">
+                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div><!--/.table__row-->
+
+                  <div class="table__row">
+                    <div class="table__col">
+                      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
                     </div>
                     <div class="table__col">02.12.24 12:34</div>
                     <div class="table__col">
@@ -449,19 +455,21 @@
     </div><!--/.sContainer-->
   </footer><!--/.footer-->
 
-  <section class="modal modal--confirm" hidden>
+  <!---->
+  <!--<section class="modal modal&#45;&#45;confirm" data-sumbiot-modal>-->
 
-    <div class="modal__inner">
+  <!--    <div class="modal__inner">-->
 
-      <h2 class="modal__title">Вы желаете удалить пользователя?</h2>
+  <!--      <h2 class="modal__title sFz-14">Вы желаете удалить пользователя?</h2>-->
 
-      <div class="modal__wrapper-btn">
-        <a class="modal__btn sBtn" href="">Удалить</a>
-        <a class="modal__btn sBtn" href="">Отмена</a>
-      </div>
-    </div><!--/.modal__inner"-->
+  <!--      <div class="modal__wrapper-btn">-->
+  <!--        <a class="modal__btn btn btn&#45;&#45;error" href="">Удалить</a>-->
+  <!--        <a class="modal__btn btn btn&#45;&#45;cancel" href="" data-sumbiot-modal-close>Отмена</a>-->
+  <!--      </div>-->
+  <!--    </div>&lt;!&ndash;/.modal__inner"&ndash;&gt;-->
 
-  </section><!--/.modal-->
+  <!--</section>&lt;!&ndash;/.modal&ndash;&gt;-->
+  <!---->
 
 </body>
 

@@ -1,0 +1,42 @@
+
+@use "jquery-ui/dist/themes/base/jquery-ui.css"; //-> стили datepicker (подключение из node_modules)
+
+.ui-datepicker {
+  margin-top: 5px;
+  margin-left: -65px;
+  //z-index: 1000;
+}
+
+.ui-widget-header .ui-icon {
+  background-image: url(../img/ui-icons_444444_256x240.png);
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+  background-image: url(../img/ui-icons_444444_256x240.png);
+}
+
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  outline: 1px solid #c5c5c5;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  top: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  left: 0;
+  width: 31px;
+  height: 100%;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 0;
+  width: 31px;
+  height: 100%;
+}

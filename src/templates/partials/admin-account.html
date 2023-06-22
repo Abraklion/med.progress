@@ -1,7 +1,14 @@
 
 {{#ifpage 'admin-users' 'registry-users'}}
 <!--Список пользователей-->
-<h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">Список пользователей</h2>
+<h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">
+  {{#ifpage 'admin-users'}}
+  Список пользователей
+  {{/ifpage}}
+  {{#ifpage 'registry-users'}}
+  Список врачей
+  {{/ifpage}}
+</h2>
 
 <form action="" class="content__form-search sForm" method="post">
 
@@ -13,12 +20,12 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear">
+      <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
       </div>
     </div><!--/.sForm__item-->
 
@@ -30,7 +37,7 @@
 
 </form><!--/.sForm-->
 
-<div class="table">
+<div class="table table--even table--hover-shadow table--v3">
 
   <div class="table__row table__row--header">
     <div class="table__col">
@@ -51,28 +58,28 @@
   {{#repeat 4}}
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip">login_polzovatela</span>
+      <span class="clip" title="login_polzovatela">login_polzovatela</span>
     </div>
     <div class="table__col">
-      <span class="table__clip">4752015698</span>
+      <span class="clip" title="4752015698">4752015698</span>
     </div>
     <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">не активированна</div>
+    <div class="table__col sText-color-danger sFw-600">не активированна</div>
     <div class="table__col">
       <div class="table__wrapper-btn">
         <a class="table__link" href="" title="Редактировать пользователя">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
         <a class="table__link" href="" title="История операций">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить пользователя">
+        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -81,28 +88,28 @@
 
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip">login_polzovatela</span>
+      <span class="clip" title="login_polzovatela">login_polzovatela</span>
     </div>
     <div class="table__col">
-      <span class="table__clip">4752015698</span>
+      <span class="clip" title="4752015698">4752015698</span>
     </div>
     <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">активированна</div>
+    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
     <div class="table__col">
       <div class="table__wrapper-btn">
         <a class="table__link" href="" title="Редактировать пользователя">
-          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
         <a class="table__link" href="" title="История операций">
-          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-card"/>
+          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить пользователя">
-          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+        <a class="table__link js-delete-user" href="" data-sumbiot-target=".modal--confirm" title="Удалить пользователя">
+          <svg class="table__icon" width="22" height="22" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -112,63 +119,103 @@
 
 </div>
 
-<a href="" class="sBtn">Еще</a>
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
 
 
 {{#ifpage 'admin-history' 'registry-history'}}
 <!--История операций-->
-<h2 class="content__title title">
+<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">
+  {{#ifpage 'admin-history'}}
   История операций пользователя
+  {{/ifpage}}
+  {{#ifpage 'registry-history'}}
+  История операций врача
+  {{/ifpage}}
   <b>login_polzovatela</b>
 </h2>
 
-<form action="" class="content__form-search sForm" method="post">
+<form action="" class="content__form-search content__form-search--v2 sForm" method="post">
 
   <div class="sForm__inner">
 
-    <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear">
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="21:00">
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00">
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-1">
-      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
+    <div class="sForm__item">
+      <button class="btn btn--primary" type="submit">Вывести</button>
     </div><!--/.sForm__item-->
 
   </div><!--/.sForm__inner-->
 
 </form><!--/.sForm-->
 
-<div class="table">
+<div class="table table--odd table--v1">
 
-  {{#repeat 7}}
+  {{#repeat 2}}
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip">Списание</span>
+      <span class="clip">Списание</span>
     </div>
-    <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">350 Р</div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="clip">Пополнение</span>
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+2000 Р</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="clip">Списание</span>
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      <span class="clip">Пополнение</span>
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+350 Р</div>
   </div>
   {{/repeat}}
 
 </div>
 
-<a href="" class="sBtn">Еще</a>
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
 
 
 {{#ifpage 'admin-edit-user' 'registry-edit-user'}}
 <!--Редактировать пользователя-->
-<h2 class="content__title title">
+<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">
+  {{#ifpage 'admin-edit-user'}}
   Редактирование пользователя
+  {{/ifpage}}
+  {{#ifpage 'registry-edit-user'}}
+  Редактирование врача
+  {{/ifpage}}
   <b>login_polzovatela</b>
 </h2>
 
@@ -197,7 +244,7 @@
     </label><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <button class="sBtn sBtn-primary" type="submit">Сохранить</button>
+      <button class="btn btn--primary" type="submit">Сохранить</button>
     </div><!--/.sForm__item-->
 
   </div><!--/.sForm__inner-->
@@ -209,29 +256,29 @@
 
 {{#ifpage 'admin-news' 'registry-news'}}
 <!--Список новостей-->
-<h2 class="content__title title">Список новостей</h2>
+<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">Список новостей</h2>
 
-<form action="" class="content__form-search sForm" method="post">
+<form action="" class="content__form-search sForm sMb-24" method="post">
 
   <div class="sForm__inner">
 
-    <div class="sForm__item sForm__item--column-5">
+    <div class="sForm__item">
       <label class="visually-hidden" for="name_news">Поиск по названию новости</label>
       <input class="sForm__input" id="name_news" type="text" name="name_news" placeholder="Поиск по названию">
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear">
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input" id="start_date" type="text" name="start_date" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input" id="end_date" type="text" name="end_date" placeholder="21:00">
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00">
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-1">
-      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
+    <div class="sForm__item">
+      <button class="btn btn--primary" type="submit">Вывести</button>
     </div><!--/.sForm__item-->
 
   </div><!--/.sForm__inner-->
@@ -239,22 +286,22 @@
 </form><!--/.sForm-->
 
 <div class="content__wrapper-btn">
-  <a class="sBtn sBtn-primary" href="">Добавить новость</a>
+  <a class="btn btn--primary" href="">Добавить новость</a>
 </div>
 
-<div class="table">
+<div class="table table--even table--hover-shadow table--v4">
 
-  <div class="table__row table__row--header">
+  <div class="table__row  table__row--header">
     <div class="table__col">
       <b>Название</b>
     </div>
-    <div class="table__col">
+    <div class="table__col sText-align-center">
       <b>Последнее редактировние</b>
     </div>
-    <div class="table__col">
-      <b>Дата и время публикации</b>
+    <div class="table__col sText-align-center">
+      <b>Дата публикации</b>
     </div>
-    <div class="table__col">
+    <div class="table__col sText-align-center">
       <b>Статус новости</b>
     </div>
   </div><!--/.table__row--header-->
@@ -262,21 +309,21 @@
   {{#repeat 4}}
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+      <span class="clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой столовой</span>
     </div>
-    <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">не опубликована</div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sPl-16 sText-color-danger sFw-600">не опубликована</div>
     <div class="table__col">
       <div class="table__wrapper-btn">
         <a class="table__link" href="" title="Редактировать новость">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить новость">
+        <a class="table__link js-delete-news" href="" data-sumbiot-target=".modal--confirm" title="Удалить новость">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -285,21 +332,21 @@
 
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
+      <span class="clip" title="Плюсы еды из школьной столовой">Плюсы еды из школьной столовой</span>
     </div>
-    <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">02.12.24 12:34</div>
-    <div class="table__col">опубликована</div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sPl-16 sText-color-success sFw-600">опубликована</div>
     <div class="table__col">
       <div class="table__wrapper-btn">
         <a class="table__link" href="" title="Редактировать новость">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить новость">
+        <a class="table__link js-delete-news" href="" data-sumbiot-target=".modal--confirm" title="Удалить новость">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -308,7 +355,7 @@
   {{/repeat}}
 </div>
 
-<a href="" class="sBtn">Еще</a>
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
 
@@ -500,7 +547,7 @@
   {{#repeat 4}}
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip" title="О нас">О нас</span>
+      <span class="clip" title="О нас">О нас</span>
     </div>
     <div class="table__col">02.12.24 12:34</div>
     <div class="table__col">
@@ -521,7 +568,7 @@
 
   <div class="table__row">
     <div class="table__col">
-      <span class="table__clip" title="Платежи через сайт">Платежи через сайт</span>
+      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
     </div>
     <div class="table__col">02.12.24 12:34</div>
     <div class="table__col">
