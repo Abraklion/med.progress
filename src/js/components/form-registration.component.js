@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import 'jquery-validation'
+import 'jquery-validation/dist/localization/messages_ru'
 
 import Component from "../core/component";
 
@@ -35,24 +36,24 @@ export default class FormRegistrationComponent extends Component {
    */
   _validate() {
 
+    jQuery.validator.addClassRules("js-required-validate", {
+      required: true
+    });
+
+    jQuery.validator.addClassRules("js-email-validate", {
+      required: true,
+      email: true
+    });
+
+    jQuery.validator.addClassRules("js-password-validate", {
+      required: true,
+      equalTo: "#password"
+    });
+
+
     return $(this.$el).validate({
       // -> включить режим отладки
       debug: false,
-
-      // -> настройка полей формы (какие поля валидировать)
-      rules: {
-        email: {
-          required: true,
-          email: true
-        },
-        password: {
-          required: true
-        },
-        repeat_password: {
-          required: true,
-          equalTo: "#password"
-        }
-      },
 
       // -> настройка пользовательских сообщений (для валидируемых полей)
       messages: {
@@ -78,6 +79,7 @@ export default class FormRegistrationComponent extends Component {
       // -> тэг который будет создаваться, в него записываться сообщения (по умолчанию: "label")
       errorElement: 'span',
 
+      // -> дополнительный класс к сообщению
       success: 'sForm__valid-text',
 
       // переопределяет стили невалидных полей

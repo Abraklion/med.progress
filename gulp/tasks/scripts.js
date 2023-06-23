@@ -27,7 +27,8 @@ module.exports = function () {
 
           // личный кабинет / кабинет врача страницы
           personalAccount: {
-            import: './src/js/personalAccount.js'
+            import: './src/js/personalAccount.js',
+            dependOn: ['validation']
           },
 
           // кабинет администратора / регистратуры страницы
@@ -47,6 +48,7 @@ module.exports = function () {
             import : ['jquery-validation', 'jquery-validation/dist/additional-methods'],
           },
 
+          // выпадающий список
           'select2' : 'select2',
         },
         output: {

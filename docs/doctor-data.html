@@ -18,6 +18,7 @@
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/validation.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/personalAccount.js"></script>
 </head>
@@ -196,7 +197,7 @@
               <div class="personal__content content content--data">
 
                 <!--Личные данные-->
-                <form action="" class="sForm" method="post">
+                <form action="" class="sForm js-validate" method="post">
 
                   <section class="content__box">
                     <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">Личные данные</h2>
@@ -215,7 +216,7 @@
 
                       <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="email">Почта</label>
-                        <input class="sForm__input" id="email" type="text" name="email" placeholder="email@email.com">
+                        <input class="sForm__input js-email-validate" id="email" type="text" name="mail" placeholder="email@email.com">
                       </div>
 
                       <div class="sForm__item sForm__item--column-lg-6">
@@ -248,7 +249,7 @@
 
                       <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="repeat_password">Повторите пароль</label>
-                        <input class="sForm__input" id="repeat_password" type="text" name="repeat_password" placeholder="Повторите пароль">
+                        <input class="sForm__input js-password-validate" id="repeat_password" type="text" name="repeat_password" placeholder="Повторите пароль">
                       </div>
 
                     </div>
