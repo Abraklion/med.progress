@@ -24,6 +24,32 @@
   overflow-y: auto;
 
   background-color: #F4F5F8;
+
+  @include m.media('lg') {
+    // Кнопки боковые
+    &::-webkit-scrollbar-button {
+      width: 5px;
+      height: 0;
+    }
+
+    // Цвет дорожки, по которой двигается бегунок прокрутки.
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0,0,0,0.05);
+      border-radius: 5px;
+    }
+
+    // Цвет бегунка полосы, а так же его закругление.
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    // Основная ширина полосы прокрутки.
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+
 }
 
 .navigation__menu-inner{

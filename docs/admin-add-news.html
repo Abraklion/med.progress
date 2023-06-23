@@ -18,6 +18,8 @@
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/select2.js"></script>
+  <script defer src="js/datepicker.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/adminAccount.js"></script>
 </head>
@@ -212,7 +214,7 @@
               <div class="personal__content content content--add-news">
 
                 <!--Создание новости-->
-                <h2 class="content__title title">Создание новости</h2>
+                <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Создание новости</h2>
 
                 <form action="" class="content__form-page sForm" method="post">
 
@@ -220,46 +222,46 @@
 
                     <div class="sForm__item">
                       <label class="visually-hidden" for="name_news">Название новости</label>
-                      <input class="sForm__input" id="name_news" type="text" name="name_news" placeholder="Название новости">
+                      <input class="sForm__input sText-align-left" id="name_news" type="text" name="name_news" placeholder="Название новости">
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__linear sD-grid">
+                      <div class="sForm__linear sForm__linear--v3 sG-justify-content-left">
                         <label class="sForm__label" for="date_publish">Дата публикации</label>
-                        <input class="sForm__input" id="date_publish" type="text" name="date_publish" placeholder="01.10.22">
+                        <input class="sForm__input js-datepicker" id="date_publish" type="text" name="date_publish" placeholder="00.00.00" autocomplete="off">
 
                         <label class="sForm__label" for="time_publish">время</label>
-                        <input class="sForm__input" id="time_publish" type="text" name="time_publish" placeholder="21:00">
+                        <input class="sForm__input js-time" id="time_publish" type="text" name="time_publish" placeholder="00.00" autocomplete="off">
                       </div>
                     </div><!--/.sForm__item-->
 
-                    <div class="sForm__item sForm__item--column-5">
-                      <div class="sForm__linear">
+                    <div class="sForm__item sForm__item--column-6">
+                      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left">
                         <label class="sForm__label" for="type_news">Тип новости</label>
-                        <select name="type_news" id="type_news">
+                        <select class="sForm__select js-select2" name="type_news" id="type_news">
                           <option value=""></option>
-                          <option value="">Главная</option>
-                          <option value="">По городу Уфа</option>
-                          <option value="">По городу Москва</option>
+                          <option value="1">Главная</option>
+                          <option value="2">По городу Уфа</option>
+                          <option value="3">По городу Москва</option>
                         </select>
                       </div>
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item sForm__item--column-4">
-                      <div class="sForm__linear sD-grid">
+                      <div class="sForm__linear sForm__linear--v5 sG-justify-content-left">
                         <label class="visually-hidden" for="date_edit">Дата редактирования</label>
-                        <input class="sForm__input" id="date_edit" type="text" name="date_edit" placeholder="01.10.22">
+                        <input class="sForm__input js-datepicker" id="date_edit" type="text" name="date_edit" placeholder="00.00.00" autocomplete="off">
 
                         <label class="sForm__label" for="time_edit">время</label>
-                        <input class="sForm__input" id="time_edit" type="text" name="time_edit" placeholder="21:00">
+                        <input class="sForm__input js-time" id="time_edit" type="text" name="time_edit" placeholder="00:00" autocomplete="off">
                       </div>
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__file-upload sD-grid">
+                      <div class="sForm__file-upload">
                         <div class="sForm__file-btn">
                           <button type="button">Choose file</button>
-                          <input type="file" name="photo__news">
+                          <input class="js-upload" type="file" name="photo__news">
                         </div>
                         <div class="sForm__file-name">No file chosen</div>
                       </div>
@@ -271,9 +273,9 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__linear">
-                        <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
-                        <a class="sBtn sBtn-primary" href="">Отмена</a>
+                      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+                        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+                        <a class="btn btn--primary" href="">Отмена</a>
                       </div>
                     </div><!--/.sForm__item-->
 

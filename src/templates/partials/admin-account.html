@@ -1,7 +1,7 @@
 
 {{#ifpage 'admin-users' 'registry-users'}}
 <!--Список пользователей-->
-<h2 class="content__title title title sFw-500 sFz-20 sText-transform-none">
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
   {{#ifpage 'admin-users'}}
   Список пользователей
   {{/ifpage}}
@@ -126,7 +126,7 @@
 
 {{#ifpage 'admin-history' 'registry-history'}}
 <!--История операций-->
-<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
   {{#ifpage 'admin-history'}}
   История операций пользователя
   {{/ifpage}}
@@ -143,10 +143,10 @@
     <div class="sForm__item">
       <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00" autocomplete="off">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
       </div>
     </div><!--/.sForm__item-->
 
@@ -209,7 +209,7 @@
 
 {{#ifpage 'admin-edit-user' 'registry-edit-user'}}
 <!--Редактировать пользователя-->
-<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
   {{#ifpage 'admin-edit-user'}}
   Редактирование пользователя
   {{/ifpage}}
@@ -256,7 +256,7 @@
 
 {{#ifpage 'admin-news' 'registry-news'}}
 <!--Список новостей-->
-<h2 class="content__title title title title sFw-500 sFz-20 sText-transform-none">Список новостей</h2>
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Список новостей</h2>
 
 <form action="" class="content__form-search sForm sMb-24" method="post">
 
@@ -270,10 +270,10 @@
     <div class="sForm__item">
       <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="start_date">от</label>
-        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00" autocomplete="off">
 
         <label class="sForm__label" for="end_date">до</label>
-        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00">
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
       </div>
     </div><!--/.sForm__item-->
 
@@ -362,7 +362,7 @@
 
 {{#ifpage 'admin-add-news' 'registry-add-news'}}
 <!--Создание новости-->
-<h2 class="content__title title">Создание новости</h2>
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Создание новости</h2>
 
 <form action="" class="content__form-page sForm" method="post">
 
@@ -370,46 +370,46 @@
 
     <div class="sForm__item">
       <label class="visually-hidden" for="name_news">Название новости</label>
-      <input class="sForm__input" id="name_news" type="text" name="name_news" placeholder="Название новости">
+      <input class="sForm__input sText-align-left" id="name_news" type="text" name="name_news" placeholder="Название новости">
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sD-grid">
+      <div class="sForm__linear sForm__linear--v3 sG-justify-content-left">
         <label class="sForm__label" for="date_publish">Дата публикации</label>
-        <input class="sForm__input" id="date_publish" type="text" name="date_publish" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="date_publish" type="text" name="date_publish" placeholder="00.00.00" autocomplete="off">
 
         <label class="sForm__label" for="time_publish">время</label>
-        <input class="sForm__input" id="time_publish" type="text" name="time_publish" placeholder="21:00">
+        <input class="sForm__input js-time" id="time_publish" type="text" name="time_publish" placeholder="00.00" autocomplete="off">
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-5">
-      <div class="sForm__linear">
+    <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left">
         <label class="sForm__label" for="type_news">Тип новости</label>
-        <select name="type_news" id="type_news">
+        <select class="sForm__select js-select2" name="type_news" id="type_news">
           <option value=""></option>
-          <option value="">Главная</option>
-          <option value="">По городу Уфа</option>
-          <option value="">По городу Москва</option>
+          <option value="1">Главная</option>
+          <option value="2">По городу Уфа</option>
+          <option value="3">По городу Москва</option>
         </select>
       </div>
     </div><!--/.sForm__item-->
 
     <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear sD-grid">
+      <div class="sForm__linear sForm__linear--v5 sG-justify-content-left">
         <label class="visually-hidden" for="date_edit">Дата редактирования</label>
-        <input class="sForm__input" id="date_edit" type="text" name="date_edit" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="date_edit" type="text" name="date_edit" placeholder="00.00.00" autocomplete="off">
 
         <label class="sForm__label" for="time_edit">время</label>
-        <input class="sForm__input" id="time_edit" type="text" name="time_edit" placeholder="21:00">
+        <input class="sForm__input js-time" id="time_edit" type="text" name="time_edit" placeholder="00:00" autocomplete="off">
       </div>
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__file-upload sD-grid">
+      <div class="sForm__file-upload">
         <div class="sForm__file-btn">
           <button type="button">Choose file</button>
-          <input type="file" name="photo__news">
+          <input class="js-upload" type="file" name="photo__news">
         </div>
         <div class="sForm__file-name">No file chosen</div>
       </div>
@@ -421,9 +421,9 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear">
-        <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
-        <a class="sBtn sBtn-primary" href="">Отмена</a>
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+        <a class="btn btn--primary" href="">Отмена</a>
       </div>
     </div><!--/.sForm__item-->
 
@@ -437,7 +437,7 @@
 
 {{#ifpage 'admin-edit-news' 'registry-edit-news'}}
 <!--Редактирование новости-->
-<h2 class="content__title title">Редактирование новости</h2>
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Редактирование новости</h2>
 
 <form action="" class="content__form-page sForm" method="post">
 
@@ -445,37 +445,38 @@
 
     <div class="sForm__item">
       <label class="visually-hidden" for="name_news">Название новости</label>
-      <input class="sForm__input" id="name_news" type="text" name="name_news" value="Название новости" placeholder="Название новости">
+      <input class="sForm__input sText-align-left" id="name_news" type="text" name="name_news" value="Название новости" placeholder="Название новости">
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear">
+      <div class="sForm__linear sForm__linear--v3 sG-justify-content-left">
         <label class="sForm__label" for="date_publish">Дата публикации</label>
-        <input class="sForm__input" id="date_publish" type="text" name="date_publish" value="01.10.22" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="date_publish" type="text" name="date_publish" placeholder="00.00.00">
 
         <label class="sForm__label" for="time_publish">время</label>
-        <input class="sForm__input" id="time_publish" type="text" name="time_publish" value="21:00" placeholder="21:00">
+        <input class="sForm__input js-time" id="time_publish" type="text" name="time_publish" placeholder="00:00">
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-5">
-      <div class="sForm__linear">
+    <div class="sForm__item sForm__item--column-6">
+      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left">
         <label class="sForm__label" for="type_news">Тип новости</label>
-        <select name="type_news" id="type_news">
-          <option value="">Главная</option>
-          <option value="">По городу Уфа</option>
-          <option value="">По городу Москва</option>
+        <select class="sForm__select js-select2" name="type_news" id="type_news">
+          <option value=""></option>
+          <option value="1">Главная</option>
+          <option value="2" selected>По городу Уфа</option>
+          <option value="3">По городу Москва</option>
         </select>
       </div>
     </div><!--/.sForm__item-->
 
     <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear">
+      <div class="sForm__linear sForm__linear--v5 sG-justify-content-left">
         <label class="visually-hidden" for="date_edit">Дата публикации</label>
-        <input class="sForm__input" id="date_edit" type="text" name="date_edit" value="01.10.22" placeholder="01.10.22">
+        <input class="sForm__input js-datepicker" id="date_edit" type="text" name="date_edit" placeholder="00.00.00">
 
         <label class="sForm__label" for="time_edit">время</label>
-        <input class="sForm__input" id="time_edit" type="text" name="time_edit" value="21:00" placeholder="21:00">
+        <input class="sForm__input js-time" id="time_edit" type="text" name="time_edit" placeholder="00:00">
       </div>
     </div><!--/.sForm__item-->
 
@@ -483,7 +484,7 @@
       <div class="sForm__file-upload">
         <div class="sForm__file-btn">
           <button type="button">Choose file</button>
-          <input type="file" name="photo__news">
+          <input class="js-upload" type="file" name="photo__news">
         </div>
         <div class="sForm__file-name">No file chosen</div>
       </div>
@@ -499,9 +500,9 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear">
-        <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
-        <a class="sBtn sBtn-primary" href="">Отмена</a>
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+        <a class="btn btn--primary" href="">Отмена</a>
       </div>
     </div><!--/.sForm__item-->
 
@@ -514,26 +515,26 @@
 
 {{#ifpage 'admin-list-page' 'registry-list-page'}}
 <!--Список страниц-->
-<h2 class="content__title title">Список страниц</h2>
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Список страниц</h2>
 
-<form class="content__form-search sForm" action="" method="post">
+<form class="content__form-search content__form-search--v3 sForm" action="" method="post">
 
   <div class="sForm__inner">
 
-    <div class="sForm__item sForm__item--column-5">
+    <div class="sForm__item">
       <label class="visually-hidden" for="name_page">Поиск по названию</label>
       <input class="sForm__input" id="name_page" type="text" name="name_page" placeholder="Поиск по названию">
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-1">
-      <button class="sBtn sBtn-primary" type="submit">Вывести</button>
+    <div class="sForm__item">
+      <button class="btn btn--primary" type="submit">Вывести</button>
     </div><!--/.sForm__item-->
 
   </div><!--/.sForm__inner-->
 
 </form><!--/.sForm-->
 
-<div class="table">
+<div class="table table--even table--hover-shadow table--v5">
 
   <div class="table__row table__row--header">
     <div class="table__col">
@@ -549,17 +550,17 @@
     <div class="table__col">
       <span class="clip" title="О нас">О нас</span>
     </div>
-    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col sText-align-center sPr-16">02.12.24 12:34</div>
     <div class="table__col">
-      <div class="table__wrapper-btn">
-        <a class="table__link" href="" title="Редактировать страницу">
-          <svg class="table__icon"  width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+      <div class="table__wrapper-btn sF-justify-content-end">
+        <a class="table__link sMr-10" href="" title="Редактировать страницу">
+          <svg class="table__icon" width="26" height="26" aria-hidden="true">
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить страницу">
+        <a class="table__link js-delete-page" href="" data-sumbiot-target=".modal--confirm" title="Удалить страницу">
           <svg class="table__icon"  width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -570,17 +571,17 @@
     <div class="table__col">
       <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
     </div>
-    <div class="table__col">02.12.24 12:34</div>
+    <div class="table__col sText-align-center sPr-16">02.12.24 12:34</div>
     <div class="table__col">
-      <div class="table__wrapper-btn">
-        <a class="table__link" href="" title="Редактировать страницу">
+      <div class="table__wrapper-btn sF-justify-content-end">
+        <a class="table__link sMr-10" href="" title="Редактировать страницу">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
         </a>
-        <a class="table__link" href="" title="Удалить страницу">
+        <a class="table__link js-delete-page" href="" data-sumbiot-target=".modal--confirm" title="Удалить страницу">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
-            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket"/>
+            <use xlink:href="assets/img/sprite/sprite.svg#icon-basket-min"/>
           </svg>
         </a>
       </div>
@@ -589,14 +590,14 @@
   {{/repeat}}
 </div>
 
-<a href="" class="sBtn">Еще</a>
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
 
 
 {{#ifpage 'admin-edit-page' 'registry-edit-page'}}
 <!--Редактирование страниц-->
-<h2 class="content__title title">Редактирование блока</h2>
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Редактирование блока</h2>
 
 <form action="" class="content__form-page sForm" method="post">
 
@@ -604,14 +605,14 @@
 
     <div class="sForm__item">
       <label class="visually-hidden" for="name_page">Название блока</label>
-      <input class="sForm__input" id="name_page" type="text" name="name_page" placeholder="Название блока">
+      <input class="sForm__input sText-align-left" id="name_page" type="text" name="name_page" placeholder="Название блока">
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
       <div class="sForm__file-upload">
         <div class="sForm__file-btn">
           <button type="button">Choose file</button>
-          <input type="file" name="photo__page">
+          <input class="js-upload"  type="file" name="photo__page">
         </div>
         <div class="sForm__file-name">No file chosen</div>
       </div>
@@ -627,9 +628,9 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear">
-        <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
-        <a class="sBtn sBtn-primary" href="">Отмена</a>
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+        <a class="btn btn--primary" href="">Отмена</a>
       </div>
     </div><!--/.sForm__item-->
 

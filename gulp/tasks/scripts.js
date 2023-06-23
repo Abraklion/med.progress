@@ -33,7 +33,7 @@ module.exports = function () {
           // кабинет администратора / регистратуры страницы
           adminAccount: {
             import: './src/js/adminAccount.js',
-            dependOn: ['datepicker']
+            dependOn: ['datepicker','select2']
           },
 
           // слайдер
@@ -46,6 +46,8 @@ module.exports = function () {
           'validation' : {
             import : ['jquery-validation', 'jquery-validation/dist/additional-methods'],
           },
+
+          'select2' : 'select2',
         },
         output: {
           filename: '[name].js'

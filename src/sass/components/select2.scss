@@ -1,0 +1,61 @@
+@use "select2/dist/css/select2.min"; //-> кастомные селекты (подключение стилей библиотеки select2 из node_modules)
+
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+.sSelect{
+  border-radius: 8px 8px 0 0!important;
+
+  border-color: rgba(v.$primary,0.5)!important;
+}
+
+.select2-container .select2-selection--single{
+  height: 29px;
+}
+
+.select2-results__option--highlighted{
+  background-color: rgba(v.$primary,0.6)!important;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
+  box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20)!important;
+
+  border-color: #2C3D73!important;
+}
+
+.select2-search__field{
+  outline: none!important;
+}
+
+.select2-dropdown{
+  overflow: hidden;
+
+  border-color: rgba(v.$primary,0.5)!important;
+  border-radius: 0 0 8px 8px!important;
+}
+
+.select2-results__options{
+
+  // Кнопки боковые
+  &::-webkit-scrollbar-button {
+    width: 5px;
+    height: 0;
+  }
+
+  // Цвет дорожки, по которой двигается бегунок прокрутки.
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 5px;
+  }
+
+  // Цвет бегунка полосы, а так же его закругление.
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  // Основная ширина полосы прокрутки.
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+}

@@ -18,6 +18,8 @@
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/select2.js"></script>
+  <script defer src="js/datepicker.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/adminAccount.js"></script>
 </head>
@@ -212,7 +214,7 @@
               <div class="personal__content content content--edit-news">
 
                 <!--Редактирование страниц-->
-                <h2 class="content__title title">Редактирование блока</h2>
+                <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">Редактирование блока</h2>
 
                 <form action="" class="content__form-page sForm" method="post">
 
@@ -220,14 +222,14 @@
 
                     <div class="sForm__item">
                       <label class="visually-hidden" for="name_page">Название блока</label>
-                      <input class="sForm__input" id="name_page" type="text" name="name_page" placeholder="Название блока">
+                      <input class="sForm__input sText-align-left" id="name_page" type="text" name="name_page" placeholder="Название блока">
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
                       <div class="sForm__file-upload">
                         <div class="sForm__file-btn">
                           <button type="button">Choose file</button>
-                          <input type="file" name="photo__page">
+                          <input class="js-upload" type="file" name="photo__page">
                         </div>
                         <div class="sForm__file-name">No file chosen</div>
                       </div>
@@ -243,9 +245,9 @@
                     </div><!--/.sForm__item-->
 
                     <div class="sForm__item">
-                      <div class="sForm__linear">
-                        <button class="sBtn sBtn-primary" type="submit">Сохранить изменения</button>
-                        <a class="sBtn sBtn-primary" href="">Отмена</a>
+                      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+                        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+                        <a class="btn btn--primary" href="">Отмена</a>
                       </div>
                     </div><!--/.sForm__item-->
 

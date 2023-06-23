@@ -3,6 +3,8 @@ import {modalConfirm} from "./templates/modal-confirm";
 
 import date from "./modules/date";
 import mask from "./modules/mask";
+import upload from "./modules/upload";
+import select2 from "./modules/select2";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -30,10 +32,27 @@ window.addEventListener('DOMContentLoaded', () => {
     ).init()
   }
 
-  // Работы с датой в временем
+  // модалка подтвердить удаление страницы
+  if(document.querySelector('.js-delete-page')) {
+    new ModalCreate(
+      '.js-delete-page',
+      '.modal--confirm',
+      modalConfirm,
+      {
+        title : 'Вы желаете удалить страницу?'
+      }
+    ).init()
+  }
+
+  // Работы с датой и временем
   date()
 
   // Маски
   mask()
 
+  // Кастомный input для загрузки файла
+  upload('.js-upload')
+
+  // Кастомный выпадающий список
+  select2()
 })

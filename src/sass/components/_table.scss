@@ -100,6 +100,15 @@
     }
   }
 
+  &--v5 {
+    .table__row{
+      align-items: center;
+
+      grid-template-columns: 428px 215px 160px;
+      grid-column-gap: 15px;
+    }
+  }
+
 }
 
 .table__row{

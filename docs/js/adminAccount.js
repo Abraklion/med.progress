@@ -12,6 +12,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _templates_modal_confirm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./templates/modal-confirm */ "./src/js/templates/modal-confirm.js");
 /* harmony import */ var _modules_date__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/date */ "./src/js/modules/date.js");
 /* harmony import */ var _modules_mask__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/mask */ "./src/js/modules/mask.js");
+/* harmony import */ var _modules_upload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/upload */ "./src/js/modules/upload.js");
+/* harmony import */ var _modules_select2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/select2 */ "./src/js/modules/select2.js");
+
+
 
 
 
@@ -31,11 +35,24 @@ window.addEventListener('DOMContentLoaded', () => {
     }).init();
   }
 
-  // Работы с датой в временем
+  // модалка подтвердить удаление страницы
+  if (document.querySelector('.js-delete-page')) {
+    new _modules_modal_create__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-delete-page', '.modal--confirm', _templates_modal_confirm__WEBPACK_IMPORTED_MODULE_1__.modalConfirm, {
+      title: 'Вы желаете удалить страницу?'
+    }).init();
+  }
+
+  // Работы с датой и временем
   (0,_modules_date__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
   // Маски
   (0,_modules_mask__WEBPACK_IMPORTED_MODULE_3__["default"])();
+
+  // Кастомный input для загрузки файла
+  (0,_modules_upload__WEBPACK_IMPORTED_MODULE_4__["default"])('.js-upload');
+
+  // Кастомный выпадающий список
+  (0,_modules_select2__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 
 /***/ }),
@@ -445,6 +462,118 @@ class ModalCreate {
     document.querySelector('body').append(modal);
   }
 }
+
+/***/ }),
+
+/***/ "./src/js/modules/select2.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/select2.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var select2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! select2 */ "./node_modules/select2/dist/js/select2.js");
+/* harmony import */ var select2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(select2__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/**
+ * Кастомный выпадающий список
+ */
+const select2 = () => {
+  /** русификация */
+  const lang = {
+    searching: function () {
+      return "Поиск...";
+    },
+    noResults: function () {
+      return "Совпадений не найдено";
+    },
+    loadingMore: function () {
+      return "Загрузка…";
+    },
+    errorLoading: function () {
+      return "Результаты не удалось загрузить";
+    },
+    maximumSelected: function (e) {
+      let str = "Вы можете выбрать не более " + e.maximum + " элемент";
+      return str += e.maximum === 1 ? 'a' : 'ов';
+    }
+  };
+
+  /** конфигурация однострочного списка */
+  const config = {
+    debug: false,
+    //-> включить отладочные сообщения в консоли браузера
+
+    disabled: false,
+    //-> значение true, управление выбором будет отключено
+
+    multiple: false,
+    //-> включает режим множественного выбора
+
+    selectOnClose: false,
+    //-> автоматически выбирает пункт при закрытии раскрывающегося списка
+
+    selectionCssClass: 'sSelect',
+    //-> добавляет дополнительные классы CSS в активный список. по умолчанию: ''
+    dropdownCssClass: 'sSelect-dropdown',
+    //-> добавляет дополнительные классы CSS в раскрывающийся список. по умолчанию: ''
+
+    theme: 'default',
+    //-> настройка темы. по умолчанию: default
+
+    minimumResultsForSearch: 10,
+    //-> минимальное количество результатов, необходимое для отображения окна поиска. по умолчанию: 0
+
+    // язык оф дока: https://select2.org/i18n
+    language: {
+      // все названия свойств можно найти в языковый файла в select2
+      ...lang
+    }
+  };
+
+  /** переопредиления параметров по умолчанию перед инициализацией списков */
+  jquery__WEBPACK_IMPORTED_MODULE_0___default().fn.select2.defaults.set("width", "100%");
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-select2').select2({
+    placeholder: '',
+    // -> текст по умолчанию. по умолчанию: null
+
+    ...config
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (select2);
+
+/***/ }),
+
+/***/ "./src/js/modules/upload.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/upload.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ *  Определяет названия файла
+ *  @param {string} triggerSelector - селектор input с input type='file'.
+ * */
+const upload = triggerSelector => {
+  const uploadFields = document.querySelectorAll(triggerSelector);
+  uploadFields.forEach(item => {
+    item.addEventListener('input', () => {
+      let dots;
+      const arr = item.files[0].name.split('.');
+      arr[0].length > 15 ? dots = "..." : dots = '.';
+      const name = arr[0].substring(0, 15) + dots + arr[1];
+      item.parentElement.nextElementSibling.textContent = name;
+    });
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (upload);
 
 /***/ }),
 
@@ -947,7 +1076,7 @@ $.fn.extend({
 },
 /******/ function(__webpack_require__) { // webpackRuntimeModules
 /******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-/******/ __webpack_require__.O(0, ["datepicker"], function() { return __webpack_exec__("./src/js/adminAccount.js"); });
+/******/ __webpack_require__.O(0, ["datepicker","select2"], function() { return __webpack_exec__("./src/js/adminAccount.js"); });
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

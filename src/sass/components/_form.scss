@@ -45,6 +45,10 @@
     justify-content: start;
     grid-column-gap: 35px;
   }
+
+  .content__form-search--v3 &{
+    grid-template-columns: 348px auto;
+  }
 }
 
 .#{v.$prefix}Form__item{
@@ -71,6 +75,14 @@
   }
 
   .content__form-search &{
+    margin-bottom: 0;
+
+    font-size: 16px;
+
+    color: v.$black;
+  }
+
+  .content__form-page &{
     margin-bottom: 0;
 
     font-size: 16px;
@@ -130,6 +142,67 @@
     text-align: center;
   }
 
+  .content__form-page &{
+    padding: 5px 15px;
+
+    text-align: center;
+  }
+
+}
+
+.#{v.$prefix}Form__textarea{
+  display: block;
+
+  width: 100%;
+  height: 295px;
+
+  resize: none;
+
+  padding: 10px 30px;
+
+  outline: 0;
+  border: 1px solid rgba(v.$primary, 0.50);
+  border-radius: 8px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+
+  line-height: 17px;
+
+  color: #2C3D73;
+
+  transition: all 0.2s ease;
+
+  // Кнопки боковые
+  &::-webkit-scrollbar-button {
+    width: 5px;
+    height: 0;
+  }
+
+  // Цвет дорожки, по которой двигается бегунок прокрутки.
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 5px;
+  }
+
+  // Цвет бегунка полосы, а так же его закругление.
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+  }
+
+  // Основная ширина полосы прокрутки.
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &:focus{
+    box-shadow: inset 0 0 10px rgba(255, 121, 121, 0.20);
+
+    border-color: #2C3D73;
+  }
 }
 
 .#{v.$prefix}Form__valid{
@@ -241,8 +314,25 @@
     grid-column-gap: 10px;
   }
 
+  &--v4{
+    align-items: center;
 
+    grid-template-columns: auto 300px;
+    grid-column-gap: 10px;
+  }
 
+  &--v5{
+    align-items: center;
+
+    grid-template-columns: 103px auto 103px;
+    grid-column-gap: 10px;
+  }
+
+  &--v6{
+    align-items: center;
+
+    grid-template-columns: auto auto;
+  }
 }
 
 .#{v.$prefix}Form__title{
@@ -273,29 +363,72 @@
 }
 
 .#{v.$prefix}Form__file-upload{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 8px;
+  border: 1px solid rgba(v.$primary, 0.50);
+
 
   & button{
+    width: 100%;
+    height: 100%;
 
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+
+    color: v.$primary;
   }
 
   & input {
+    position: absolute;
+    left: 0;
+    top: 0;
 
+    width: 100%;
+    height: 100%;
+
+    transform: scale(20);
+
+    opacity: 0;
+    cursor: pointer;
   }
 }
 
 .#{v.$prefix}Form__file-btn{
+  padding: 5px 30px;
 
+  text-align: center;
+
+  border-right: 1px solid rgba(v.$primary, 0.50);
 }
 
 .#{v.$prefix}Form__file-name{
-
+  padding: 5px 30px;
 }
 
 .#{v.$prefix}Form__preview{
+  width: 177px;
+  height: 131px;
 
+  margin: 3px 0 0 3px;
+
+  border-radius: 3px;
+
+  overflow: hidden;
 }
 
 .#{v.$prefix}Form__preview-img{
+  width: 100%;
+  height: 100%;
 
+  object-fit: contain;
 }
 
