@@ -3,19 +3,23 @@
 ### Адаптивные страницы
 
 **Главная** <br>
-index.html
+docs/index.html
 
 **Регистрация** <br>
-registration.html
+docs/registration.html
+
+**Вход** <br>
+docs/entry.html
 
 **Для технических страниц по типу: <br>О нас | Политика конфеденциальности | Платежи через сайт | Публичная оферта** <br>
-about.html
+docs/about.html
 
 **Личный кабинет** <br>
 docs/personal-data.html <br>
 docs/personal-extract.html <br>
 docs/personal-hospital.html <br>
 docs/personal-hospitals-list.html <br>
+docs/personal-location-hospital.html <br>
 docs/personal-record-confirm.html <br>
 docs/personal-record-date.html <br>
 docs/personal-record-department.html <br>

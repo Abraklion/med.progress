@@ -70,6 +70,25 @@
       }
     }
 
+    .entry & {
+      width: 100%;
+
+      margin-top: 10px;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-width: 2px;
+
+      &:hover{
+        color: v.$white;
+
+        background-color: v.$primary;
+
+        border-color: v.$primary;
+      }
+    }
+
     .content--data & {
       padding: 10px 30px;
     }

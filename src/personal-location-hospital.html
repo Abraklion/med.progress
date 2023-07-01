@@ -1,0 +1,61 @@
+---
+layout: default
+
+title: Поликлиника местонахождение | Личный кабинет
+description: Описание поликлиники
+
+link: style.min.css
+script: ['runtime.js', 'validation.js', 'main.js', 'personalAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header-record}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner sPt-0">
+
+        <div class="personal__img">
+          <img src="assets/img/icon-plug3.svg" width="1180" height="450" alt="">
+        </div>
+
+        <h1 class="personal__title title sMt-24 sMt-lg-60 sMt-xl-100">Поликлиника №52</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu-record}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-lg-8 sCol-xl-9">
+
+            <div class="personal__content content content--hospital-location">
+
+              {{> personal-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer}}
+

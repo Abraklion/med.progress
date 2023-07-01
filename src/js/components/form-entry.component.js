@@ -5,9 +5,9 @@ import 'jquery-validation/dist/localization/messages_ru'
 import Component from "../core/component";
 
 /**
- *  Зарегистрировать пользователя
+ *  Вход
  * */
-export default class FormRegistrationComponent extends Component {
+export default class FormEntryComponent extends Component {
 
   /**
    * Конструктор
@@ -38,34 +38,18 @@ export default class FormRegistrationComponent extends Component {
       required: true
     });
 
-    jQuery.validator.addClassRules("js-email-validate", {
-      required: true,
-      email: true
-    });
-
-    jQuery.validator.addClassRules("js-password-validate", {
-      required: true,
-      equalTo: "#password"
-    });
-
-
     return $(this.$el).validate({
       // -> включить режим отладки
       debug: false,
 
       // -> настройка пользовательских сообщений (для валидируемых полей)
       messages: {
-        email: {
-          required: 'Пожалуйста, укажите Email',
-          email: 'Пожалуйста, введите действительный адрес электронной почты'
+        login: {
+          required: 'Пожалуйста, укажите логин',
         },
         password: {
           required: 'Пожалуйста, укажите пароль',
         },
-        repeat_password: {
-          required: 'Пожалуйста, повторите пароль',
-          equalTo: 'Пароли не совпадают'
-        }
       },
 
       // -> класс добавляется к полю, если оно валидно (по умолчанию: "valid")
@@ -77,21 +61,14 @@ export default class FormRegistrationComponent extends Component {
       // -> тэг который будет создаваться, в него записываться сообщения (по умолчанию: "label")
       errorElement: 'span',
 
-      // -> дополнительный класс к сообщению
-      success: 'sForm__valid-text',
-
-      // переопределяет стили невалидных полей
-      highlight: function(element, errorClass, validClass) {
-        $(element).addClass(errorClass).removeClass(validClass);
-        $(element).next('.sForm__valid-text').removeClass('sForm__valid-text');
-      },
-
       // отмены изменений, сделанных опцией highlight
       unhighlight: function(element, errorClass, validClass) {
         $(element).removeClass(errorClass).addClass(validClass);
-        $(element).next('.sForm__valid-text').text('Заполненно верно')
-      },
 
+        if(!$(element).val()) {
+          $(element).removeClass(validClass);
+        }
+      }
     })
   }
 }

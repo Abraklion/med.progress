@@ -116,13 +116,56 @@
   overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 
-.hospital__btn{
+.hospital__wrapper-btn{
   margin: auto 0 0 0;
 
-  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
 
-  @include m.media('md') {
-    align-self: center;
+.hospital__btn{
+  padding: 10px;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &--favourites{
+    width: 39px;
+    height: 39px;
+
+    background-image: url(../img/icons-favourites.svg);
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+
+    opacity: 0.8;
+
+    border-radius: 50%;
+
+    &:hover{
+      opacity: 1;
+
+      background-image: url(../img/icons-favourites-transparent.svg);
+    }
+  }
+
+  &--favourites-transparent{
+    width: 39px;
+    height: 39px;
+
+    background-image: url(../img/icons-favourites-transparent.svg);
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+
+    opacity: 0.8;
+
+    border-radius: 50%;
+
+    &:hover{
+      opacity: 1;
+
+      background-image: url(../img/icons-favourites.svg);
+    }
   }
 }
 

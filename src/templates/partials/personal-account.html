@@ -80,9 +80,8 @@
 <!--Медицинские учреждения-->
 <div class="content__box">
 
-  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">
     Мои медицинские учреждения
-    <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Редактировать</a>
   </h2>
 
   <div class="sRow sGy-4">
@@ -107,7 +106,11 @@
               <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
             </div>
 
-            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+            <div class="hospital__wrapper-btn">
+              <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+              <a href="" class="hospital__btn hospital__btn--favourites  btn btn--transparent" title="Удалить из избранного"></a>
+            </div>
+
 
           </div>
         </div>
@@ -121,7 +124,7 @@
 
 <div class="content__box sMb-0">
 
-  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-sm-center">
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-md-center">
     Другие медицинские учреждения
     <a href="" class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none">Посмотреть все</a>
   </h2>
@@ -148,7 +151,10 @@
               <p class="hospital__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
             </div>
 
-            <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+            <div class="hospital__wrapper-btn">
+              <a href="" class="hospital__btn btn btn--transparent">Узнать больше</a>
+              <a href="" class="hospital__btn hospital__btn--favourites-transparent  btn btn--transparent" title="Добавить в избранное"></a>
+            </div>
 
           </div>
         </div>
@@ -198,8 +204,15 @@
 
 
 
+{{#ifpage 'personal-location-hospital'}}
+<!--Местонахождение-->
+<iframe class="content__map" src="https://yandex.ru/map-widget/v1/?ll=56.059633%2C53.437563&mode=poi&poi%5Bpoint%5D=56.057390%2C53.438133&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1007826602&z=16.4" width="560" height="400" allowfullscreen="true"></iframe>
+{{/ifpage}}
+
+
+
 {{#ifpage 'about'}}
-<!--Поликлиника-->
+<!--Технические страницы-->
 <div class="content__text">
   <h1>Заголовок H1</h1>
   <h2>Заголовок H2</h2>

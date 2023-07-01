@@ -34,10 +34,10 @@
 @use "components/menu";
 @use "components/title";
 @use "components/form";
-@use "components/hospital";
 @use "components/table";
 @use "components/breadcrumbs";
 @use "components/btn";
+@use "components/hospital";
 @use "components/modal";
 @use "components/datepicker";
 @use "components/select2";
@@ -48,6 +48,7 @@
 @use "components/info";
 @use "components/working-scheme";
 @use "components/registration";
+@use "components/entry";
 @use "components/personal";
 @use "components/sidebar";
 @use "components/content";

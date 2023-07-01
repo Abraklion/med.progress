@@ -17,6 +17,24 @@
     }
   }
 
+  &--entry{
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    background-color: v.$white;
+
+    padding: 20px 30px 30px 30px;
+
+    border: 2px solid #E9E9E9;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+
+    @include m.media('lg') {
+      padding: 30px 30px 30px 30px;
+    }
+  }
+
   &--confirm{
     .#{v.$prefix}Form__label{
       margin-bottom: 0;
