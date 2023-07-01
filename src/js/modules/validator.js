@@ -19,7 +19,7 @@ const validator = () => {
     equalTo: "#password"
   });
 
-  let a = $('.js-validate').validate({
+  $('.js-validate').validate({
     debug: false,
 
     // -> класс добавляется к полю, если оно валидно (по умолчанию: "valid")
@@ -40,17 +40,13 @@ const validator = () => {
       }
 
       if($(element).attr('id') === 'phone') {
-        console.log($(element).val().search('_'))
         if ($(element).val().search('_') !== -1) {
           $(element).removeClass(validClass);
         }
       }
 
-
     },
   })
-
-  console.log(a)
 
 }
 

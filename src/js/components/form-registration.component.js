@@ -26,8 +26,6 @@ export default class FormRegistrationComponent extends Component {
    */
   init() {
     this.form = this._validate()
-
-    console.log(this.form)
   }
 
   /**
@@ -86,8 +84,6 @@ export default class FormRegistrationComponent extends Component {
       highlight: function(element, errorClass, validClass) {
         $(element).addClass(errorClass).removeClass(validClass);
         $(element).next('.sForm__valid-text').removeClass('sForm__valid-text');
-
-        console.log($(element).next('.sForm__valid-text'))
       },
 
       // отмены изменений, сделанных опцией highlight

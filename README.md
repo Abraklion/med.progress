@@ -8,6 +8,9 @@ index.html
 **Регистрация** <br>
 registration.html
 
+**Для технических страниц по типу: <br>О нас | Политика конфеденциальности | Платежи через сайт | Публичная оферта** <br>
+about.html
+
 **Личный кабинет** <br>
 docs/personal-data.html <br>
 docs/personal-extract.html <br>
